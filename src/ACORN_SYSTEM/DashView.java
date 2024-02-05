@@ -212,8 +212,11 @@ private String date() {
         SINGLE = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         GoFbutton = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        Spiderman = new javax.swing.JButton();
+        gta = new javax.swing.JButton();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         MULTI = new javax.swing.JPanel();
         CODbutton = new javax.swing.JButton();
@@ -223,14 +226,15 @@ private String date() {
         jLabel19 = new javax.swing.JLabel();
         ENTER = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        netfilx = new javax.swing.JButton();
+        disney = new javax.swing.JButton();
+        hbo = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
         OTHERS = new javax.swing.JPanel();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
+        L4D2 = new javax.swing.JButton();
+        SUPERMARIO64 = new javax.swing.JButton();
+        ACII = new javax.swing.JButton();
+        jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         cat2 = new javax.swing.JButton();
@@ -249,8 +253,8 @@ private String date() {
         category10 = new javax.swing.JComboBox<>();
         quantity10 = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
         unsel = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -312,6 +316,8 @@ private String date() {
             }
         });
         CATEGORY.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, -1, -1));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
         CATEGORY.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1000, 510));
 
         DASHB.addTab("DASHBOARD", CATEGORY);
@@ -566,20 +572,41 @@ private String date() {
         jLabel23.setText("Single-Player Apps");
         SINGLE.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
+        GoFbutton.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\single1 (1).jpg")); // NOI18N
         GoFbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GoFbuttonActionPerformed(evt);
             }
         });
         SINGLE.add(GoFbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 200));
-        SINGLE.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 120, 200));
 
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        Spiderman.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\single2 (1).jpg")); // NOI18N
+        Spiderman.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                SpidermanActionPerformed(evt);
             }
         });
-        SINGLE.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 120, 200));
+        SINGLE.add(Spiderman, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 120, 200));
+
+        gta.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\single3 (1).png")); // NOI18N
+        gta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gtaActionPerformed(evt);
+            }
+        });
+        SINGLE.add(gta, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 120, 200));
+
+        jLabel27.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
+        jLabel27.setText("Product Name:");
+        SINGLE.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, -1, -1));
+
+        jLabel28.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
+        jLabel28.setText("Quantity:");
+        SINGLE.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, -1, -1));
+
+        jLabel29.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
+        jLabel29.setText("Price:");
+        SINGLE.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 390, -1, -1));
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
         SINGLE.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1000, 510));
@@ -588,18 +615,23 @@ private String date() {
 
         MULTI.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        CODbutton.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\multi1 (1).jpg")); // NOI18N
         CODbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CODbuttonActionPerformed(evt);
             }
         });
         MULTI.add(CODbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 200));
+
+        Valorantbutton.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\multi2 (1).png")); // NOI18N
         MULTI.add(Valorantbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 120, 200));
+
+        farlight84button.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\multi3 (1).png")); // NOI18N
         MULTI.add(farlight84button, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 120, 200));
 
         jLabel26.setFont(new java.awt.Font("Kristen ITC", 0, 36)); // NOI18N
         jLabel26.setText("Multi-Player Apps");
-        MULTI.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, -1, -1));
+        MULTI.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
         MULTI.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1010, 510));
@@ -610,16 +642,31 @@ private String date() {
 
         jLabel22.setFont(new java.awt.Font("Kristen ITC", 0, 36)); // NOI18N
         jLabel22.setText("Entertainment Apps");
-        ENTER.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
-        ENTER.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 200));
-        ENTER.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, 120, 200));
+        ENTER.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        netfilx.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\enter1.2 (1).jpg")); // NOI18N
+        netfilx.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                netfilxActionPerformed(evt);
             }
         });
-        ENTER.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, 120, 200));
+        ENTER.add(netfilx, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 200));
+
+        disney.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\enter2 (1).jpg")); // NOI18N
+        disney.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                disneyActionPerformed(evt);
+            }
+        });
+        ENTER.add(disney, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 120, 200));
+
+        hbo.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\enter3 (1).jpg")); // NOI18N
+        hbo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hboActionPerformed(evt);
+            }
+        });
+        ENTER.add(hbo, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 120, 200));
 
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
         ENTER.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, -1, 510));
@@ -628,9 +675,34 @@ private String date() {
 
         OTHERS.setBackground(new java.awt.Color(225, 239, 237));
         OTHERS.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        OTHERS.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 200));
-        OTHERS.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 120, 200));
-        OTHERS.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 120, 200));
+
+        L4D2.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\others1 (1).png")); // NOI18N
+        L4D2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                L4D2ActionPerformed(evt);
+            }
+        });
+        OTHERS.add(L4D2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 200));
+
+        SUPERMARIO64.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\others2 (1).jpg")); // NOI18N
+        SUPERMARIO64.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SUPERMARIO64ActionPerformed(evt);
+            }
+        });
+        OTHERS.add(SUPERMARIO64, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 120, 200));
+
+        ACII.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\others3 (1).png")); // NOI18N
+        ACII.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ACIIActionPerformed(evt);
+            }
+        });
+        OTHERS.add(ACII, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 120, 200));
+
+        jLabel24.setFont(new java.awt.Font("Kristen ITC", 0, 36)); // NOI18N
+        jLabel24.setText("Other Apps");
+        OTHERS.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
         jLabel25.setText("jLabel25");
@@ -723,6 +795,8 @@ private String date() {
             }
         });
         jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 190, 90));
+
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 500));
 
         jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 500));
@@ -739,7 +813,7 @@ private String date() {
                 seladd10seladdActionPerformed(evt);
             }
         });
-        jPanel3.add(seladd10, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 10, 140, 60));
+        jPanel3.add(seladd10, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, 140, 60));
 
         product10.setBackground(new java.awt.Color(244, 236, 225));
         product10.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
@@ -749,7 +823,7 @@ private String date() {
                 product10ActionPerformed(evt);
             }
         });
-        jPanel3.add(product10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 130, 60));
+        jPanel3.add(product10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 130, 60));
 
         price10.setBackground(new java.awt.Color(244, 236, 225));
         price10.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
@@ -765,17 +839,16 @@ private String date() {
                 category10ActionPerformed(evt);
             }
         });
-        jPanel3.add(category10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 160, 60));
+        jPanel3.add(category10, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 160, 60));
 
         quantity10.setBackground(new java.awt.Color(244, 236, 225));
         quantity10.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
         quantity10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPanel3.add(quantity10, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 30, 60));
+        jPanel3.add(quantity10, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 60, 60));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/Skies and Flowers 2.0.png"))); // NOI18N
         jLabel14.setText("jLabel14");
         jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 20));
-        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(-225, -414, 1010, 510));
 
         unsel.setText("Unselect");
         unsel.addActionListener(new java.awt.event.ActionListener() {
@@ -784,6 +857,9 @@ private String date() {
             }
         });
         jPanel3.add(unsel, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 10, 100, 60));
+
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
+        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(-225, -414, 1010, 520));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 410, 780, 90));
 
@@ -1067,13 +1143,17 @@ private String date() {
 
     }//GEN-LAST:event_seladd10seladdActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    private void hboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hboActionPerformed
+        product10.setText("HBO GO");
+category10.setSelectedItem("Entertainment Apps"); 
+price10.setText(String.valueOf(1400.00));
+    }//GEN-LAST:event_hboActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    private void gtaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gtaActionPerformed
+       product10.setText("GTA V");
+category10.setSelectedItem("Single Player Game"); 
+price10.setText(String.valueOf(1500.00));                                        
+    }//GEN-LAST:event_gtaActionPerformed
 
     private void category10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_category10ActionPerformed
         // TODO add your handling code here:
@@ -1084,12 +1164,14 @@ private String date() {
     }//GEN-LAST:event_product10ActionPerformed
 
     private void CODbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CODbuttonActionPerformed
-        // TODO add your handling code here:
+     product10.setText("Call of Duty");
+category10.setSelectedItem("Multi-Player Game"); 
+price10.setText(String.valueOf(2000.00));                                            
     }//GEN-LAST:event_CODbuttonActionPerformed
 
     private void GoFbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GoFbuttonActionPerformed
 product10.setText("God of War");
-category10.setSelectedItem("Single Player Game"); // Corrected method
+category10.setSelectedItem("Single Player Game"); 
 price10.setText(String.valueOf(1200.00));    
     }//GEN-LAST:event_GoFbuttonActionPerformed
 
@@ -1111,6 +1193,42 @@ price10.setText(String.valueOf(1200.00));
         }
     }//GEN-LAST:event_selectActionPerformed
 
+    private void SpidermanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SpidermanActionPerformed
+    product10.setText("Spider-Man: Miles Morales");
+category10.setSelectedItem("Single Player Game"); 
+price10.setText(String.valueOf(1200.00));
+    }//GEN-LAST:event_SpidermanActionPerformed
+
+    private void disneyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disneyActionPerformed
+        product10.setText("Disney+");
+category10.setSelectedItem("Entertainment Apps"); 
+price10.setText(String.valueOf(1500.00));
+    }//GEN-LAST:event_disneyActionPerformed
+
+    private void netfilxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_netfilxActionPerformed
+     product10.setText("Netflix");
+category10.setSelectedItem("Entertainment Apps"); 
+price10.setText(String.valueOf(1250.00));
+    }//GEN-LAST:event_netfilxActionPerformed
+
+    private void L4D2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_L4D2ActionPerformed
+        product10.setText("Left 4 Dead 2");
+category10.setSelectedItem("Other Apps"); 
+price10.setText(String.valueOf(450.00));
+    }//GEN-LAST:event_L4D2ActionPerformed
+
+    private void SUPERMARIO64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SUPERMARIO64ActionPerformed
+       product10.setText("Super Mario 64");
+category10.setSelectedItem("Other Apps"); 
+price10.setText(String.valueOf(350.00));
+    }//GEN-LAST:event_SUPERMARIO64ActionPerformed
+
+    private void ACIIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ACIIActionPerformed
+         product10.setText("Assasin's Creed II");
+category10.setSelectedItem("Other Apps"); 
+price10.setText(String.valueOf(1000.00));
+    }//GEN-LAST:event_ACIIActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1131,16 +1249,20 @@ price10.setText(String.valueOf(1200.00));
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ABOUT;
     private javax.swing.JPanel ACCOUNT;
+    private javax.swing.JButton ACII;
     private javax.swing.JPanel CART;
     private javax.swing.JPanel CATEGORY;
     private javax.swing.JButton CODbutton;
     private javax.swing.JTabbedPane DASHB;
     private javax.swing.JPanel ENTER;
     private javax.swing.JButton GoFbutton;
+    private javax.swing.JButton L4D2;
     private javax.swing.JPanel MULTI;
     private javax.swing.JPanel OTHERS;
     private javax.swing.JPanel PAYMENT;
     private javax.swing.JPanel SINGLE;
+    private javax.swing.JButton SUPERMARIO64;
+    private javax.swing.JButton Spiderman;
     private javax.swing.JButton Valorantbutton;
     private javax.swing.JButton cat;
     private javax.swing.JButton cat1;
@@ -1152,19 +1274,14 @@ price10.setText(String.valueOf(1200.00));
     private javax.swing.JButton create;
     private javax.swing.JButton del;
     private javax.swing.JButton delete;
+    private javax.swing.JButton disney;
     private javax.swing.JButton farlight84button;
     private javax.swing.JButton getpay;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
+    private javax.swing.JButton gta;
+    private javax.swing.JButton hbo;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1181,8 +1298,12 @@ price10.setText(String.valueOf(1200.00));
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1196,6 +1317,7 @@ price10.setText(String.valueOf(1200.00));
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton logout;
     private javax.swing.JTextField name;
+    private javax.swing.JButton netfilx;
     private javax.swing.JButton pay;
     private javax.swing.JTextField payment;
     private javax.swing.JTextField price10;
