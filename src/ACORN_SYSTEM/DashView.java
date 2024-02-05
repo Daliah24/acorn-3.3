@@ -181,18 +181,10 @@ private String date() {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
-        getpay = new javax.swing.JButton();
         reset = new javax.swing.JButton();
         del = new javax.swing.JButton();
+        getpay = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        ACCOUNT = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        logout = new javax.swing.JButton();
-        delete = new javax.swing.JButton();
-        upduser = new javax.swing.JButton();
-        updpass = new javax.swing.JButton();
-        create = new javax.swing.JButton();
-        jLabel16 = new javax.swing.JLabel();
         ABOUT = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -202,25 +194,43 @@ private String date() {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        pay = new javax.swing.JButton();
         payment = new javax.swing.JTextField();
         total = new javax.swing.JTextField();
         quan = new javax.swing.JTextField();
         change = new javax.swing.JTextField();
-        pay = new javax.swing.JButton();
-        product10 = new javax.swing.JTextField();
-        category10 = new javax.swing.JComboBox<>();
-        quantity10 = new javax.swing.JTextField();
-        price10 = new javax.swing.JTextField();
-        seladd10 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
+        ACCOUNT = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        logout = new javax.swing.JButton();
+        delete = new javax.swing.JButton();
+        upduser = new javax.swing.JButton();
+        updpass = new javax.swing.JButton();
+        create = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
+        SINGLE = new javax.swing.JPanel();
+        jLabel23 = new javax.swing.JLabel();
+        GoFbutton = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
+        MULTI = new javax.swing.JPanel();
+        CODbutton = new javax.swing.JButton();
+        Valorantbutton = new javax.swing.JButton();
+        farlight84button = new javax.swing.JButton();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
         ENTER = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
         OTHERS = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
-        MULTI = new javax.swing.JPanel();
-        jLabel19 = new javax.swing.JLabel();
-        SINGLE = new javax.swing.JPanel();
-        jLabel20 = new javax.swing.JLabel();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        jLabel25 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         cat2 = new javax.swing.JButton();
         cat3 = new javax.swing.JButton();
@@ -230,7 +240,15 @@ private String date() {
         cat = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         name = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        seladd10 = new javax.swing.JButton();
+        product10 = new javax.swing.JTextField();
+        price10 = new javax.swing.JTextField();
+        category10 = new javax.swing.JComboBox<>();
+        quantity10 = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -243,10 +261,10 @@ private String date() {
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Kristen ITC", 1, 24)); // NOI18N
         jLabel1.setText("Hot Deals");
-        CATEGORY.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 164, 50));
+        CATEGORY.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 164, 50));
 
         single.setBackground(new java.awt.Color(148, 174, 137));
-        single.setFont(new java.awt.Font("Kristen ITC", 1, 18)); // NOI18N
+        single.setFont(new java.awt.Font("Kristen ITC", 1, 24)); // NOI18N
         single.setText("Single Player");
         single.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         single.setPreferredSize(new java.awt.Dimension(230, 90));
@@ -255,10 +273,10 @@ private String date() {
                 singleActionPerformed(evt);
             }
         });
-        CATEGORY.add(single, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
+        CATEGORY.add(single, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(148, 174, 137));
-        jButton2.setFont(new java.awt.Font("Kristen ITC", 1, 18)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Kristen ITC", 1, 24)); // NOI18N
         jButton2.setText("Mutli-Player");
         jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton2.setPreferredSize(new java.awt.Dimension(230, 90));
@@ -267,7 +285,7 @@ private String date() {
                 jButton2ActionPerformed(evt);
             }
         });
-        CATEGORY.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
+        CATEGORY.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, -1, -1));
 
         jButton3.setBackground(new java.awt.Color(148, 174, 137));
         jButton3.setFont(new java.awt.Font("Kristen ITC", 1, 18)); // NOI18N
@@ -279,10 +297,10 @@ private String date() {
                 jButton3ActionPerformed(evt);
             }
         });
-        CATEGORY.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 130, -1, -1));
+        CATEGORY.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, -1, -1));
 
         jButton4.setBackground(new java.awt.Color(148, 174, 137));
-        jButton4.setFont(new java.awt.Font("Kristen ITC", 1, 18)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Kristen ITC", 1, 24)); // NOI18N
         jButton4.setText("Others");
         jButton4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton4.setPreferredSize(new java.awt.Dimension(230, 90));
@@ -291,10 +309,10 @@ private String date() {
                 jButton4ActionPerformed(evt);
             }
         });
-        CATEGORY.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, -1, -1));
+        CATEGORY.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/skies and flowers.png"))); // NOI18N
-        CATEGORY.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, -1, 480));
+        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\new Skies and flower bg.png")); // NOI18N
+        CATEGORY.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1000, 510));
 
         DASHB.addTab("DASHBOARD", CATEGORY);
 
@@ -325,36 +343,139 @@ private String date() {
         table.setColumnSelectionAllowed(true);
         jScrollPane1.setViewportView(table);
 
-        CART.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 630, 330));
+        CART.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 630, 250));
 
-        getpay.setText("Pay");
-        getpay.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                getpayActionPerformed(evt);
-            }
-        });
-        CART.add(getpay, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 430, -1, -1));
-
+        reset.setBackground(new java.awt.Color(148, 174, 137));
+        reset.setFont(new java.awt.Font("Kristen ITC", 1, 14)); // NOI18N
         reset.setText("Reset");
+        reset.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         reset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 resetActionPerformed(evt);
             }
         });
-        CART.add(reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 430, -1, -1));
+        CART.add(reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, 120, 50));
 
+        del.setBackground(new java.awt.Color(148, 174, 137));
+        del.setFont(new java.awt.Font("Kristen ITC", 1, 14)); // NOI18N
         del.setText("Delete");
+        del.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         del.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 delActionPerformed(evt);
             }
         });
-        CART.add(del, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, -1, -1));
+        CART.add(del, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 320, 120, 50));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/skies and flowers.png"))); // NOI18N
-        CART.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 860, 480));
+        getpay.setBackground(new java.awt.Color(148, 174, 137));
+        getpay.setFont(new java.awt.Font("Kristen ITC", 1, 14)); // NOI18N
+        getpay.setText("Pay");
+        getpay.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getpay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                getpayActionPerformed(evt);
+            }
+        });
+        CART.add(getpay, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 320, 120, 50));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
+        CART.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1000, 510));
 
         DASHB.addTab("Cart", CART);
+
+        ABOUT.setBackground(new java.awt.Color(225, 239, 237));
+        ABOUT.setPreferredSize(new java.awt.Dimension(460, 467));
+        ABOUT.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setBackground(new java.awt.Color(225, 239, 237));
+        jLabel4.setFont(new java.awt.Font("Kristen ITC", 0, 36)); // NOI18N
+        jLabel4.setText("About Us");
+        ABOUT.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
+        ABOUT.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, -1, 510));
+
+        DASHB.addTab("ABOUT US", ABOUT);
+
+        PAYMENT.setBackground(new java.awt.Color(225, 239, 237));
+        PAYMENT.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Kristen ITC", 0, 36)); // NOI18N
+        jLabel3.setText("Payment");
+        PAYMENT.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        jLabel10.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
+        jLabel10.setText("Enter Payment:");
+        PAYMENT.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
+
+        jLabel11.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
+        jLabel11.setText("Total:");
+        PAYMENT.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, -1, -1));
+
+        jLabel12.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
+        jLabel12.setText("Quantity:");
+        PAYMENT.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, -1, -1));
+
+        jLabel13.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
+        jLabel13.setText("Change:");
+        PAYMENT.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, -1, -1));
+
+        pay.setBackground(new java.awt.Color(148, 174, 137));
+        pay.setFont(new java.awt.Font("Kristen ITC", 1, 18)); // NOI18N
+        pay.setText("Pay");
+        pay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                payActionPerformed(evt);
+            }
+        });
+        PAYMENT.add(pay, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 160, 100, 50));
+
+        payment.setBackground(new java.awt.Color(148, 174, 137));
+        payment.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
+        payment.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        payment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                paymentActionPerformed(evt);
+            }
+        });
+        PAYMENT.add(payment, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 300, 50));
+
+        total.setBackground(new java.awt.Color(148, 174, 137));
+        total.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
+        total.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        total.setEnabled(false);
+        total.setFocusable(false);
+        total.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                totalActionPerformed(evt);
+            }
+        });
+        PAYMENT.add(total, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 300, 50));
+
+        quan.setBackground(new java.awt.Color(148, 174, 137));
+        quan.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
+        quan.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        quan.setEnabled(false);
+        quan.setFocusable(false);
+        PAYMENT.add(quan, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 300, 50));
+
+        change.setBackground(new java.awt.Color(148, 174, 137));
+        change.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
+        change.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        change.setEnabled(false);
+        change.setFocusable(false);
+        change.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                changeActionPerformed(evt);
+            }
+        });
+        PAYMENT.add(change, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 300, 50));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\new Skies and flower bg.png")); // NOI18N
+        PAYMENT.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1000, 510));
+
+        DASHB.addTab("Payment", PAYMENT);
 
         ACCOUNT.setBackground(new java.awt.Color(225, 239, 237));
         ACCOUNT.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -427,146 +548,111 @@ private String date() {
         });
         ACCOUNT.add(create, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 200, 60));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/skies and flowers.png"))); // NOI18N
-        ACCOUNT.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 860, 480));
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
+        ACCOUNT.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1000, 510));
 
         DASHB.addTab("Account", ACCOUNT);
 
-        ABOUT.setBackground(new java.awt.Color(225, 239, 237));
-        ABOUT.setPreferredSize(new java.awt.Dimension(460, 467));
-        ABOUT.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel4.setBackground(new java.awt.Color(225, 239, 237));
-        jLabel4.setFont(new java.awt.Font("Kristen ITC", 0, 36)); // NOI18N
-        jLabel4.setText("About Us");
-        ABOUT.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
-
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/skies and flowers.png"))); // NOI18N
-        ABOUT.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, -1, 480));
-
-        DASHB.addTab("ABOUT US", ABOUT);
-
-        PAYMENT.setBackground(new java.awt.Color(225, 239, 237));
-        PAYMENT.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Kristen ITC", 0, 36)); // NOI18N
-        jLabel3.setText("Payment");
-        PAYMENT.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
-
-        jLabel10.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
-        jLabel10.setText("Enter Payment:");
-        PAYMENT.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
-
-        jLabel11.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
-        jLabel11.setText("Total:");
-        PAYMENT.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, -1, -1));
-
-        jLabel12.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
-        jLabel12.setText("Quantity:");
-        PAYMENT.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, -1, -1));
-
-        jLabel13.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
-        jLabel13.setText("Change:");
-        PAYMENT.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, -1, -1));
-
-        payment.setBackground(new java.awt.Color(148, 174, 137));
-        payment.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
-        payment.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        payment.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                paymentActionPerformed(evt);
-            }
-        });
-        PAYMENT.add(payment, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 300, 50));
-
-        total.setBackground(new java.awt.Color(148, 174, 137));
-        total.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
-        total.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        total.setEnabled(false);
-        total.setFocusable(false);
-        total.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                totalActionPerformed(evt);
-            }
-        });
-        PAYMENT.add(total, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 300, 50));
-
-        quan.setBackground(new java.awt.Color(148, 174, 137));
-        quan.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
-        quan.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        quan.setEnabled(false);
-        quan.setFocusable(false);
-        PAYMENT.add(quan, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 300, 50));
-
-        change.setBackground(new java.awt.Color(148, 174, 137));
-        change.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
-        change.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        change.setEnabled(false);
-        change.setFocusable(false);
-        change.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeActionPerformed(evt);
-            }
-        });
-        PAYMENT.add(change, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 300, 50));
-
-        pay.setText("Pay");
-        pay.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                payActionPerformed(evt);
-            }
-        });
-        PAYMENT.add(pay, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 380, -1, -1));
-        PAYMENT.add(product10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-26, 440, 130, -1));
-
-        category10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Single Player Game", "Entertainment Apps", "Multiplayer Game", "Others" }));
-        PAYMENT.add(category10, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 440, 130, -1));
-        PAYMENT.add(quantity10, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 440, 110, -1));
-        PAYMENT.add(price10, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 440, 100, -1));
-
-        seladd10.setText("Select and Add");
-        seladd10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                seladd10seladdActionPerformed(evt);
-            }
-        });
-        PAYMENT.add(seladd10, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 440, -1, -1));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/skies and flowers.png"))); // NOI18N
-        PAYMENT.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 860, 480));
-
-        DASHB.addTab("Payment", PAYMENT);
-
-        ENTER.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/skies and flowers.png"))); // NOI18N
-        ENTER.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 860, 480));
-
-        DASHB.addTab("ENTER", ENTER);
-
-        OTHERS.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/skies and flowers.png"))); // NOI18N
-        OTHERS.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 6, -1, 470));
-
-        DASHB.addTab("OTHERS", OTHERS);
-
-        MULTI.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/skies and flowers.png"))); // NOI18N
-        MULTI.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 860, 480));
-
-        DASHB.addTab("MULTI", MULTI);
-
+        SINGLE.setBackground(new java.awt.Color(225, 239, 237));
         SINGLE.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/skies and flowers.png"))); // NOI18N
-        SINGLE.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 860, 480));
+        jLabel23.setFont(new java.awt.Font("Kristen ITC", 0, 36)); // NOI18N
+        jLabel23.setText("Single-Player Apps");
+        SINGLE.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        GoFbutton.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\single1 (1).jpg")); // NOI18N
+        GoFbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GoFbuttonActionPerformed(evt);
+            }
+        });
+        SINGLE.add(GoFbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 200));
+
+        jButton8.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\single2 (1).jpg")); // NOI18N
+        SINGLE.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 120, 200));
+
+        jButton9.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\single3 (1).png")); // NOI18N
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        SINGLE.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 120, 200));
+
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
+        SINGLE.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1000, 510));
 
         DASHB.addTab("SINGLE", SINGLE);
 
-        jPanel2.add(DASHB, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, -40, 640, 510));
+        MULTI.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        CODbutton.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\multi1 (1).jpg")); // NOI18N
+        CODbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CODbuttonActionPerformed(evt);
+            }
+        });
+        MULTI.add(CODbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 200));
+
+        Valorantbutton.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\multi2 (1).png")); // NOI18N
+        MULTI.add(Valorantbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 120, 200));
+
+        farlight84button.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\multi3 (1).png")); // NOI18N
+        MULTI.add(farlight84button, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 120, 200));
+
+        jLabel26.setFont(new java.awt.Font("Kristen ITC", 0, 36)); // NOI18N
+        jLabel26.setText("Multi-Player Apps");
+        MULTI.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, -1, -1));
+
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
+        MULTI.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1010, 510));
+
+        DASHB.addTab("MULTI", MULTI);
+
+        ENTER.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel22.setFont(new java.awt.Font("Kristen ITC", 0, 36)); // NOI18N
+        jLabel22.setText("Entertainment Apps");
+        ENTER.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\enter1.2 (1).jpg")); // NOI18N
+        ENTER.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 200));
+
+        jButton5.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\enter2 (1).jpg")); // NOI18N
+        ENTER.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, 120, 200));
+
+        jButton6.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\enter3 (1).jpg")); // NOI18N
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        ENTER.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, 120, 200));
+
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
+        ENTER.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, -1, 510));
+
+        DASHB.addTab("ENTER", ENTER);
+
+        OTHERS.setBackground(new java.awt.Color(225, 239, 237));
+        OTHERS.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton13.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\others1 (1).png")); // NOI18N
+        OTHERS.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 200));
+
+        jButton14.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\others2 (1).jpg")); // NOI18N
+        OTHERS.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 120, 200));
+
+        jButton15.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\others3 (1).png")); // NOI18N
+        OTHERS.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 120, 200));
+
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
+        jLabel25.setText("jLabel25");
+        OTHERS.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1000, 510));
+
+        DASHB.addTab("OTHERS", OTHERS);
+
+        jPanel2.add(DASHB, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, -40, 780, 450));
 
         jPanel1.setBackground(new java.awt.Color(225, 239, 237));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -580,7 +666,7 @@ private String date() {
                 cat2ActionPerformed(evt);
             }
         });
-        jPanel1.add(cat2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 100, 40));
+        jPanel1.add(cat2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 100, 40));
 
         cat3.setBackground(new java.awt.Color(148, 174, 137));
         cat3.setFont(new java.awt.Font("Kristen ITC", 1, 14)); // NOI18N
@@ -591,7 +677,7 @@ private String date() {
                 cat3ActionPerformed(evt);
             }
         });
-        jPanel1.add(cat3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 100, 40));
+        jPanel1.add(cat3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 100, 40));
 
         cat1.setBackground(new java.awt.Color(148, 174, 137));
         cat1.setFont(new java.awt.Font("Kristen ITC", 1, 14)); // NOI18N
@@ -603,7 +689,7 @@ private String date() {
                 cat1ActionPerformed(evt);
             }
         });
-        jPanel1.add(cat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 100, 40));
+        jPanel1.add(cat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 100, 40));
 
         cat4.setBackground(new java.awt.Color(148, 174, 137));
         cat4.setFont(new java.awt.Font("Kristen ITC", 1, 14)); // NOI18N
@@ -617,13 +703,13 @@ private String date() {
                 cat4ActionPerformed(evt);
             }
         });
-        jPanel1.add(cat4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 100, 40));
+        jPanel1.add(cat4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 100, 40));
 
         time.setBackground(new java.awt.Color(148, 174, 137));
         time.setFont(new java.awt.Font("Kristen ITC", 1, 18)); // NOI18N
         time.setText(" 00:00:00");
         time.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPanel1.add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 100, 40));
+        jPanel1.add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 100, 40));
 
         cat.setBackground(new java.awt.Color(148, 174, 137));
         cat.setFont(new java.awt.Font("Kristen ITC", 1, 14)); // NOI18N
@@ -634,11 +720,11 @@ private String date() {
                 catActionPerformed(evt);
             }
         });
-        jPanel1.add(cat, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 100, 40));
+        jPanel1.add(cat, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 100, 40));
 
         jLabel7.setFont(new java.awt.Font("Kristen ITC", 1, 24)); // NOI18N
         jLabel7.setText("Acorn");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, 40));
 
         name.setEditable(false);
         name.setBackground(new java.awt.Color(148, 174, 137));
@@ -650,23 +736,77 @@ private String date() {
                 nameActionPerformed(evt);
             }
         });
-        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 49, 190, 90));
+        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 190, 90));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/skies and flowers.png"))); // NOI18N
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 470));
+        jLabel18.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\new Skies and flower bg.png")); // NOI18N
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 500));
 
-        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 470));
+        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 500));
+
+        jPanel3.setBackground(new java.awt.Color(225, 239, 237));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        seladd10.setBackground(new java.awt.Color(244, 236, 225));
+        seladd10.setFont(new java.awt.Font("Kristen ITC", 1, 12)); // NOI18N
+        seladd10.setText("Select and Add");
+        seladd10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        seladd10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seladd10seladdActionPerformed(evt);
+            }
+        });
+        jPanel3.add(seladd10, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 10, 140, 60));
+
+        product10.setBackground(new java.awt.Color(244, 236, 225));
+        product10.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
+        product10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        product10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                product10ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(product10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 130, 60));
+
+        price10.setBackground(new java.awt.Color(244, 236, 225));
+        price10.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
+        price10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPanel3.add(price10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, 120, 60));
+
+        category10.setBackground(new java.awt.Color(244, 236, 225));
+        category10.setFont(new java.awt.Font("Kristen ITC", 1, 12)); // NOI18N
+        category10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Single Player Game", "Entertainment Apps", "Multiplayer Game", "Others" }));
+        category10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        category10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                category10ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(category10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 160, 60));
+
+        quantity10.setBackground(new java.awt.Color(244, 236, 225));
+        quantity10.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
+        quantity10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPanel3.add(quantity10, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 120, 60));
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/Skies and Flowers 2.0.png"))); // NOI18N
+        jLabel14.setText("jLabel14");
+        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 20));
+
+        jLabel21.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\new Skies and flower bg.png")); // NOI18N
+        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(-225, -414, 1010, 510));
+
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 410, 780, 90));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -921,6 +1061,30 @@ private String date() {
 
     }//GEN-LAST:event_seladd10seladdActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void category10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_category10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_category10ActionPerformed
+
+    private void product10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_product10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_product10ActionPerformed
+
+    private void CODbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CODbuttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CODbuttonActionPerformed
+
+    private void GoFbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GoFbuttonActionPerformed
+    
+    }//GEN-LAST:event_GoFbuttonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -943,12 +1107,15 @@ private String date() {
     private javax.swing.JPanel ACCOUNT;
     private javax.swing.JPanel CART;
     private javax.swing.JPanel CATEGORY;
+    private javax.swing.JButton CODbutton;
     private javax.swing.JTabbedPane DASHB;
     private javax.swing.JPanel ENTER;
+    private javax.swing.JButton GoFbutton;
     private javax.swing.JPanel MULTI;
     private javax.swing.JPanel OTHERS;
     private javax.swing.JPanel PAYMENT;
     private javax.swing.JPanel SINGLE;
+    private javax.swing.JButton Valorantbutton;
     private javax.swing.JButton cat;
     private javax.swing.JButton cat1;
     private javax.swing.JButton cat2;
@@ -959,10 +1126,19 @@ private String date() {
     private javax.swing.JButton create;
     private javax.swing.JButton del;
     private javax.swing.JButton delete;
+    private javax.swing.JButton farlight84button;
     private javax.swing.JButton getpay;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -976,6 +1152,11 @@ private String date() {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -985,6 +1166,7 @@ private String date() {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton logout;
     private javax.swing.JTextField name;

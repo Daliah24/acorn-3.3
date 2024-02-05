@@ -106,8 +106,8 @@ private static final int MAX_LOGIN_ATTEMPTS = 3;
 
         jLabel4.setFont(new java.awt.Font("Kristen ITC", 1, 14)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel4.setText("Your All Time Stop Game Shop");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 230, 50));
+        jLabel4.setText("Your All Time Stop Game Store");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 240, 50));
 
         jLabel3.setFont(new java.awt.Font("Kristen ITC", 1, 48)); // NOI18N
         jLabel3.setText("AC    RN");
@@ -117,7 +117,7 @@ private static final int MAX_LOGIN_ATTEMPTS = 3;
         jLabel8.setText("Welcome to");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, -1, 30));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\loginbg.png")); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/loginbg.png"))); // NOI18N
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 420));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 420));
@@ -186,9 +186,9 @@ private static final int MAX_LOGIN_ATTEMPTS = 3;
         });
         jPanel3.add(signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 290, 110, 50));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\login2.0.png")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/loginbg.png"))); // NOI18N
         jLabel7.setText("\n");
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-450, 0, 860, -1));
+        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-450, 0, 860, 420));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 410, 420));
 
@@ -229,7 +229,7 @@ private static final int MAX_LOGIN_ATTEMPTS = 3;
         // Check if the account exists before attempting to log in
         if (controller.doesAccountExist(user, pass)) {
             controller.loginUser(user, pass);
-            JOptionPane.showMessageDialog(null, "Proceeding to Security Question");
+            JOptionPane.showMessageDialog(null, "Account Logged-In Succesfully");
 
             // Open DashView only if login is successful
             DashView view = new DashView(user);  // Pass the username

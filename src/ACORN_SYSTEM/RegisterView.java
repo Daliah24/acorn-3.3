@@ -279,28 +279,28 @@ try {
     }
 
     // Add security questions
-    String securityAnswer1 = JOptionPane.showInputDialog(null, "What is the maiden name of your mother:", "Security Answer 1", JOptionPane.QUESTION_MESSAGE);
+    String securityQuestion1 = JOptionPane.showInputDialog(null, "What is the maiden name of your mother:", "Security Question 1", JOptionPane.QUESTION_MESSAGE);
 
-    if (isInvalidSecurityAnswer(securityAnswer1)) {
+    if (isInvalidSecurityAnswer(securityQuestion1)) {
         JOptionPane.showMessageDialog(null, "Invalid security answer. Please provide a valid answer.", "Error", JOptionPane.ERROR_MESSAGE);
         return;
     }
 
-    String securityAnswer2 = JOptionPane.showInputDialog(null, "What is the name of your first pet:", "Security Answer 2", JOptionPane.QUESTION_MESSAGE);
+    String securityQuestion2 = JOptionPane.showInputDialog(null, "What is the name of your first pet:", "Security Question 2", JOptionPane.QUESTION_MESSAGE);
 
-    if (isInvalidSecurityAnswer(securityAnswer2)) {
+    if (isInvalidSecurityAnswer(securityQuestion2)) {
         JOptionPane.showMessageDialog(null, "Invalid security answer. Please provide a valid answer.", "Error", JOptionPane.ERROR_MESSAGE);
         return;
     }
 
     // Check password length
-    if (pass.length() < 8) {
-        JOptionPane.showMessageDialog(null, "Password must be at least 8 characters long.", "Error", JOptionPane.ERROR_MESSAGE);
+    if (pass.length() < 2) {
+        JOptionPane.showMessageDialog(null, "Password must be at least 3 characters long.", "Error", JOptionPane.ERROR_MESSAGE);
         return;
     }
 
     // Proceed with registration
-    controller.registerUser(fname, lname, age, gender, address, user, pass, securityAnswer1, securityAnswer2);
+    controller.registerUser(fname, lname, age, gender, address, user, pass, securityQuestion1, securityQuestion2);
 
     JOptionPane.showMessageDialog(null, "New account created");
     LoginView viewer = new LoginView();

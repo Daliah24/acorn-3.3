@@ -61,11 +61,11 @@
                   <Font name="Kristen ITC" size="14" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
-                <Property name="text" type="java.lang.String" value="Your All Time Stop Game Shop"/>
+                <Property name="text" type="java.lang.String" value="Your All Time Stop Game Store"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="60" y="200" width="230" height="50"/>
+                  <AbsoluteConstraints x="60" y="200" width="240" height="50"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -96,6 +96,11 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel6">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/ACORN_SYSTEM/loginbg.png"/>
+                </Property>
+              </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="0" y="0" width="860" height="420"/>
@@ -257,11 +262,14 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel7">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/ACORN_SYSTEM/loginbg.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="&#xa;"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="-450" y="0" width="860" height="-1"/>
+                  <AbsoluteConstraints x="-450" y="0" width="860" height="420"/>
                 </Constraint>
               </Constraints>
             </Component>
