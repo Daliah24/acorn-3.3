@@ -10,9 +10,9 @@ public class RegisterController {
         this.model = new RegisterModel(databaseHandler.getConnection());
     }
 
-    public void registerUser(String fname, String lname, int age, String gender, String address, String user, String pass) {
+    public void registerUser(String fname, String lname, int age, String gender, String address, String user, String pass,  String securityAnswer1, String securityAnswer2) {
         try {
-            model.registerUser(fname, lname, age, gender, address, user, pass);
+            model.registerUser(fname, lname, age, gender, address, user, pass,  securityAnswer1, securityAnswer2);
         } catch (SQLException e) {
             // Handle database-related errors
             e.printStackTrace();

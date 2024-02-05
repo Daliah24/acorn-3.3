@@ -19,7 +19,8 @@ public class LoginView extends javax.swing.JFrame {
     private LoginController controller;
    private DashView dashView;
 //    private DatabaseHandler databaseHandler;
-
+   private int loginAttempts = 0;
+private static final int MAX_LOGIN_ATTEMPTS = 3;
     public LoginView() {
         initComponents();
         this.controller = new LoginController();
@@ -227,20 +228,26 @@ public class LoginView extends javax.swing.JFrame {
 
         // Check if the account exists before attempting to log in
         if (controller.doesAccountExist(user, pass)) {
-    controller.loginUser(user, pass);
-    JOptionPane.showMessageDialog(null, "Proceeding to Security Question");
+            controller.loginUser(user, pass);
+            JOptionPane.showMessageDialog(null, "Proceeding to Security Question");
 
-    // Open DashView only if login is successful
-    SecurityView view = new SecurityView();  // Pass the username
-    view.setVisible(true);
-    this.dispose();
-} else {
-    // Display an error message if the account doesn't exist
-    JOptionPane.showMessageDialog(null, "Account does not exist. Please check your username and password.");
-}
+            // Open DashView only if login is successful
+            DashView view = new DashView(user);  // Pass the username
+            view.setVisible(true);
+            this.dispose();
+        } else {
+            // Display an error message if the account doesn't exist
+            JOptionPane.showMessageDialog(null, "Account does not exist. Please check your username and password.");
+            loginAttempts++;
+            if (loginAttempts >= MAX_LOGIN_ATTEMPTS) {
+                JOptionPane.showMessageDialog(null, "Maximum login attempts reached. Please try again later.");
+                this.dispose();
+            }
+        }
     } catch (Exception e) {
         e.printStackTrace();
     }
+
     }//GEN-LAST:event_loginActionPerformed
 
     private void signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupActionPerformed

@@ -18,7 +18,10 @@ public final class RegisterView extends javax.swing.JFrame {
    private  RegisterController controller;
    private boolean userIsLoggedIn = false;
    private static  DashView dashView;
-   
+   int maxAttempts = 3; 
+   int attempts = 0; 
+   String correctAnswer1 = "";
+String correctAnswer2 = "correctAnswer2";
     private String user;
    
    public RegisterView(boolean fromAccountPage) {
@@ -44,9 +47,7 @@ public final class RegisterView extends javax.swing.JFrame {
     public javax.swing.JButton getSaveButton(){
         return saves;
     }
-    public javax.swing.JButton getLoginButton() {
-        return login;
-    }
+    
      public javax.swing.JCheckBox getShowPassCheckBox() {
         return showpass;
     }
@@ -76,7 +77,6 @@ public final class RegisterView extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         usere = new javax.swing.JTextField();
         passe = new javax.swing.JPasswordField();
-        login = new javax.swing.JButton();
         showpass = new javax.swing.JCheckBox();
         saves = new javax.swing.JButton();
         fnamee = new javax.swing.JTextField();
@@ -118,18 +118,12 @@ public final class RegisterView extends javax.swing.JFrame {
 
         passe.setBackground(new java.awt.Color(148, 174, 137));
         passe.setFont(new java.awt.Font("Kristen ITC", 1, 14)); // NOI18N
-        jPanel3.add(passe, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 142, 312, 34));
-
-        login.setBackground(new java.awt.Color(148, 174, 137));
-        login.setFont(new java.awt.Font("Kristen ITC", 1, 12)); // NOI18N
-        login.setText("Login");
-        login.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        login.addActionListener(new java.awt.event.ActionListener() {
+        passe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginActionPerformed(evt);
+                passeActionPerformed(evt);
             }
         });
-        jPanel3.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 260, 110, 50));
+        jPanel3.add(passe, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 142, 312, 34));
 
         showpass.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
         showpass.setText("Show Password");
@@ -231,7 +225,7 @@ public final class RegisterView extends javax.swing.JFrame {
                 BackActionPerformed(evt);
             }
         });
-        jPanel3.add(Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 320, 110, 50));
+        jPanel3.add(Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 260, 110, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/skies.png"))); // NOI18N
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 440));
@@ -254,27 +248,20 @@ public final class RegisterView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_usereActionPerformed
 
-    private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
-        LoginView viewer = new LoginView();
-         userIsLoggedIn = true;
-            viewer.setVisible(true);
-            this.dispose();
-    }//GEN-LAST:event_loginActionPerformed
-
     private void showpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showpassActionPerformed
       boolean showPassword = getShowPassCheckBox().isSelected();
           getPasswordField().setEchoChar(showPassword ? '\0' : '*');
     }//GEN-LAST:event_showpassActionPerformed
 
     private void savesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_savesActionPerformed
-    String fname = fnamee.getText();
+      String fname = fnamee.getText();
     String lname = lnamee.getText();
     String address = addresse.getText();
     String gender = gendere.getSelectedItem().toString();
     String user = usere.getText();
     String pass = passe.getText();
     String ages = agee.getText();
-    
+
     try {
         // Check if ages is a valid integer
         if (!ages.matches("\\d+")) {
@@ -283,14 +270,24 @@ public final class RegisterView extends javax.swing.JFrame {
         }
 
         int age = Integer.parseInt(agee.getText());
-        
-         if (controller.doesUsernameExist(user)) {
+
+        if (controller.doesUsernameExist(user)) {
             JOptionPane.showMessageDialog(null, "Username already exists. Please choose a different username.", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
-        // Now you can proceed to register the user
-        controller.registerUser(fname, lname, age, gender, address, user, pass);
+        // Add security questions
+        String securityAnswer1 = JOptionPane.showInputDialog(null, "What is the maiden name of your mother:", "Security Answer 1", JOptionPane.QUESTION_MESSAGE);
+        String securityAnswer2 = JOptionPane.showInputDialog(null, "What is the name of your first pet:", "Security Answer 2", JOptionPane.QUESTION_MESSAGE);
+
+        // Check password length
+        if (pass.length() < 8) {
+            JOptionPane.showMessageDialog(null, "Password must be at least 8 characters long.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Proceed with registration
+        controller.registerUser(fname, lname, age, gender, address, user, pass, securityAnswer1, securityAnswer2);
 
         JOptionPane.showMessageDialog(null, "New account created");
         LoginView viewer = new LoginView();
@@ -302,6 +299,9 @@ public final class RegisterView extends javax.swing.JFrame {
     } catch (Exception e) {
         JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
     }
+
+
+
     }//GEN-LAST:event_savesActionPerformed
 
     private void fnameeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fnameeActionPerformed
@@ -337,6 +337,10 @@ public final class RegisterView extends javax.swing.JFrame {
 
     }//GEN-LAST:event_BackActionPerformed
 
+    private void passeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passeActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -359,7 +363,7 @@ public final class RegisterView extends javax.swing.JFrame {
         }
         //</editor-fold>
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater((Connection connection) -> {
+        java.awt.EventQueue.invokeLater(() -> {
             new RegisterView().setVisible(true);
         });
     }
@@ -380,7 +384,6 @@ public final class RegisterView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel lname1;
     private javax.swing.JTextField lnamee;
-    private javax.swing.JButton login;
     private javax.swing.JPasswordField passe;
     private javax.swing.JButton saves;
     private javax.swing.JCheckBox showpass;

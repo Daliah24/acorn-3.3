@@ -10,8 +10,8 @@ public class RegisterModel {
 
     public RegisterModel(Connection connection) {
     }
-    public void registerUser(String fname, String lname, int age, String gender,String address, String user, String pass) throws SQLException {
-    String query = "INSERT INTO acornaccounts (fname, lname, age, gender, address, user, pass) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    public void registerUser(String fname, String lname, int age, String gender,String address, String user, String pass , String securityAnswer1 , String securityAnswer2) throws SQLException {
+    String query = "INSERT INTO acornaccounts (fname, lname, age, gender, address, user, pass, securityAnswer1, securityAnswer2) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     try (Connection connection = DatabaseHandler.getConnection();
          PreparedStatement preparedStatement = connection.prepareStatement(query)) {
@@ -23,7 +23,8 @@ public class RegisterModel {
         preparedStatement.setString(5, address);
         preparedStatement.setString(6, user);
         preparedStatement.setString(7, pass);
-
+        preparedStatement.setString(8, securityAnswer1);
+        preparedStatement.setString(9, securityAnswer2);
         preparedStatement.executeUpdate();
     }
     }
