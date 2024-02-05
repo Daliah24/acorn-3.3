@@ -184,6 +184,7 @@ private String date() {
         reset = new javax.swing.JButton();
         del = new javax.swing.JButton();
         getpay = new javax.swing.JButton();
+        select = new javax.swing.JCheckBox();
         jLabel8 = new javax.swing.JLabel();
         ABOUT = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -249,6 +250,7 @@ private String date() {
         quantity10 = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
+        unsel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -310,8 +312,6 @@ private String date() {
             }
         });
         CATEGORY.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, -1, -1));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\new Skies and flower bg.png")); // NOI18N
         CATEGORY.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1000, 510));
 
         DASHB.addTab("DASHBOARD", CATEGORY);
@@ -377,6 +377,14 @@ private String date() {
             }
         });
         CART.add(getpay, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 320, 120, 50));
+
+        select.setText("Select All");
+        select.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selectActionPerformed(evt);
+            }
+        });
+        CART.add(select, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 290, -1, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
         CART.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1000, 510));
@@ -471,8 +479,6 @@ private String date() {
             }
         });
         PAYMENT.add(change, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 300, 50));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\new Skies and flower bg.png")); // NOI18N
         PAYMENT.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1000, 510));
 
         DASHB.addTab("Payment", PAYMENT);
@@ -560,18 +566,14 @@ private String date() {
         jLabel23.setText("Single-Player Apps");
         SINGLE.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
-        GoFbutton.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\single1 (1).jpg")); // NOI18N
         GoFbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GoFbuttonActionPerformed(evt);
             }
         });
         SINGLE.add(GoFbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 200));
-
-        jButton8.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\single2 (1).jpg")); // NOI18N
         SINGLE.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 120, 200));
 
-        jButton9.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\single3 (1).png")); // NOI18N
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -586,18 +588,13 @@ private String date() {
 
         MULTI.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        CODbutton.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\multi1 (1).jpg")); // NOI18N
         CODbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CODbuttonActionPerformed(evt);
             }
         });
         MULTI.add(CODbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 200));
-
-        Valorantbutton.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\multi2 (1).png")); // NOI18N
         MULTI.add(Valorantbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 120, 200));
-
-        farlight84button.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\multi3 (1).png")); // NOI18N
         MULTI.add(farlight84button, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 120, 200));
 
         jLabel26.setFont(new java.awt.Font("Kristen ITC", 0, 36)); // NOI18N
@@ -614,14 +611,9 @@ private String date() {
         jLabel22.setFont(new java.awt.Font("Kristen ITC", 0, 36)); // NOI18N
         jLabel22.setText("Entertainment Apps");
         ENTER.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
-
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\enter1.2 (1).jpg")); // NOI18N
         ENTER.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 200));
-
-        jButton5.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\enter2 (1).jpg")); // NOI18N
         ENTER.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, 120, 200));
 
-        jButton6.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\enter3 (1).jpg")); // NOI18N
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -636,14 +628,8 @@ private String date() {
 
         OTHERS.setBackground(new java.awt.Color(225, 239, 237));
         OTHERS.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton13.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\others1 (1).png")); // NOI18N
         OTHERS.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 200));
-
-        jButton14.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\others2 (1).jpg")); // NOI18N
         OTHERS.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 120, 200));
-
-        jButton15.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\others3 (1).png")); // NOI18N
         OTHERS.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 120, 200));
 
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
@@ -737,8 +723,6 @@ private String date() {
             }
         });
         jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 190, 90));
-
-        jLabel18.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\new Skies and flower bg.png")); // NOI18N
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 500));
 
         jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 500));
@@ -765,12 +749,12 @@ private String date() {
                 product10ActionPerformed(evt);
             }
         });
-        jPanel3.add(product10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 130, 60));
+        jPanel3.add(product10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 130, 60));
 
         price10.setBackground(new java.awt.Color(244, 236, 225));
         price10.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
         price10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPanel3.add(price10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, 120, 60));
+        jPanel3.add(price10, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, 120, 60));
 
         category10.setBackground(new java.awt.Color(244, 236, 225));
         category10.setFont(new java.awt.Font("Kristen ITC", 1, 12)); // NOI18N
@@ -786,14 +770,20 @@ private String date() {
         quantity10.setBackground(new java.awt.Color(244, 236, 225));
         quantity10.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
         quantity10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPanel3.add(quantity10, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 120, 60));
+        jPanel3.add(quantity10, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 30, 60));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/Skies and Flowers 2.0.png"))); // NOI18N
         jLabel14.setText("jLabel14");
         jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 20));
-
-        jLabel21.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\new Skies and flower bg.png")); // NOI18N
         jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(-225, -414, 1010, 510));
+
+        unsel.setText("Unselect");
+        unsel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                unselActionPerformed(evt);
+            }
+        });
+        jPanel3.add(unsel, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 10, 100, 60));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 410, 780, 90));
 
@@ -1024,40 +1014,56 @@ private String date() {
     }//GEN-LAST:event_payActionPerformed
 
     private void seladd10seladdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seladd10seladdActionPerformed
-        String Product = product10.getText();
-        String Category = category10.getSelectedItem().toString();
+         // Check if the category is selected
+    if (category10.getSelectedIndex() == -1) {
+        // Display an error message if the category is not selected
+        JOptionPane.showMessageDialog(this, "Please select a category.", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
 
-        try {
-            totalPrice = Double.parseDouble(price10.getText()); // Convert the text to double
-        } catch (NumberFormatException e) {
-            // Handle the case where the text in the price field is not a valid double
-            // Show an error message
-            JOptionPane.showMessageDialog(this, "Invalid total price. Please enter a valid number.", "Error", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
+    // Check if any of the text fields are empty
+    if (product10.getText().isEmpty() || price10.getText().isEmpty() || quantity10.getText().isEmpty()) {
+        // Display an error message if any of the fields are empty
+        JOptionPane.showMessageDialog(this, "Please fill in all fields.", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
 
-        int Quantity;
-        try {
-            Quantity = Integer.parseInt(quantity10.getText()); // Convert the text to double
-        } catch (NumberFormatException e) {
-            // Handle the case where the text in the quantity field is not a valid double
-            // Show an error message
-            JOptionPane.showMessageDialog(this, "Invalid quantity. Please enter a valid whole number.", "Error", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
+    String Product = product10.getText();
+    String Category = category10.getSelectedItem().toString();
 
-        // Assuming you have a DefaultTableModel named "tableModel"
-        DefaultTableModel tableModel = (DefaultTableModel) table.getModel(); // replace with your actual table model
+    double totalPrice;
+    try {
+        totalPrice = Double.parseDouble(price10.getText()); // Convert the text to double
+    } catch (NumberFormatException e) {
+        // Handle the case where the text in the price field is not a valid double
+        // Show an error message
+        JOptionPane.showMessageDialog(this, "Invalid total price. Please enter a valid number.", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
 
-        // Add the values to the table model
-        tableModel.addRow(new Object[]{Quantity, Product, totalPrice, Category, date()});
-        model.saveProduct(Quantity, Product, totalPrice, Category);
+    int Quantity;
+    try {
+        Quantity = Integer.parseInt(quantity10.getText()); // Convert the text to double
+    } catch (NumberFormatException e) {
+        // Handle the case where the text in the quantity field is not a valid double
+        // Show an error message
+        JOptionPane.showMessageDialog(this, "Invalid quantity. Please enter a valid whole number.", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
 
-        // Clear text fields after adding to the table
-        clearTextFields();
+    // Assuming you have a DefaultTableModel named "tableModel"
+    DefaultTableModel tableModel = (DefaultTableModel) table.getModel(); // replace with your actual table model
 
-        // Show a success message
-        JOptionPane.showMessageDialog(this, "Product added successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+    // Add the values to the table model
+    tableModel.addRow(new Object[]{Quantity, Product, totalPrice, Category, date()});
+    model.saveProduct(Quantity, Product, totalPrice, Category);
+
+    // Clear text fields after adding to the table
+    clearTextFields();
+
+    // Show a success message
+    JOptionPane.showMessageDialog(this, "Product added successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+
 
     }//GEN-LAST:event_seladd10seladdActionPerformed
 
@@ -1082,8 +1088,28 @@ private String date() {
     }//GEN-LAST:event_CODbuttonActionPerformed
 
     private void GoFbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GoFbuttonActionPerformed
-    
+product10.setText("God of War");
+category10.setSelectedItem("Single Player Game"); // Corrected method
+price10.setText(String.valueOf(1200.00));    
     }//GEN-LAST:event_GoFbuttonActionPerformed
+
+    private void unselActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unselActionPerformed
+        product10.setText("");
+    category10.setSelectedIndex(-1);
+    price10.setText("");
+    }//GEN-LAST:event_unselActionPerformed
+
+    private void selectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectActionPerformed
+        int rowCount = table.getRowCount();
+
+        if (rowCount > 0) {
+            // If there are rows in the table, select all of them
+            table.selectAll();
+        } else {
+            // Handle the case where there are no rows in the table
+            System.err.println("No rows to select.");
+        }
+    }//GEN-LAST:event_selectActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1178,14 +1204,14 @@ private String date() {
     private javax.swing.JTextField quantity10;
     private javax.swing.JButton reset;
     private javax.swing.JButton seladd10;
+    private javax.swing.JCheckBox select;
     private javax.swing.JButton single;
     private javax.swing.JTable table;
     private javax.swing.JLabel time;
     private javax.swing.JTextField total;
+    private javax.swing.JButton unsel;
     private javax.swing.JButton updpass;
     private javax.swing.JButton upduser;
     // End of variables declaration//GEN-END:variables
-
-
 }
 
