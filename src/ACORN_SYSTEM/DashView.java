@@ -16,6 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
+import javax.swing.table.DefaultTableModel;
 
 
 /**
@@ -126,71 +127,35 @@ private double getSelectedItemPrice() {
     return 10.99;
 }
 
+private void resetTable() {
+    // TODO: Implement logic to reset the table here
+    // For example, if you have a table model, you can clear it:
+    DefaultTableModel model = (DefaultTableModel) table.getModel();
+    model.setRowCount(0);
 
-  
-//private void clearTextFields() {
-//    product10.setText("");
-//    category10.setSelectedIndex(0); // Assuming the first item is a default or empty value
-//    price10.setText("");
-//    quantity10.setText("");
-//}
-  private void clearTextField() {
-    quantityTextField.setText("");
-    totalTextField.setText("");
-    jTextField4.setText("");
-   jTextField1.setText("");
+    // Clear the total JTextField
+    total.setText("");
 }
-//
-//   private String date() {
-//    // You can customize this method based on how you want to retrieve the current date
-//    // Here, we are using the current system date as a placeholder
-//    return java.time.LocalDate.now().toString();
-//}   
-// private void resetTable() {
-//    // TODO: Implement logic to reset the table here
-//    // For example, if you have a table model, you can clear it:
-//    DefaultTableModel model = (DefaultTableModel) table.getModel();
-//    model.setRowCount(0);
-//
-//    // Clear the total JTextField
-//    total.setText("");
-//}
-// public double getTotalPrice() {
-//    // TODO: Implement logic to calculate the total price based on your table data
-//    // For example, iterate through the table rows and sum up the prices
-//    double totalPrice = 0.0;
-//    // Your logic here to calculate the total price
-//
-//    return totalPrice;
-//}  
-// 
-// private int calculateTotalQuantity(int quantity) {
-//    // Implement your logic to calculate total quantity
-//    // For example, you can directly return the quantity or perform any calculation
-//    return quantity;
-//}
-//
-//private double calculateTotalPrice(int quantity, double price) {
-//    // Implement your logic to calculate total price
-//    // For example, you can return the product of quantity and price
-//    return quantity * price;
-//}
-//    private boolean isNumeric(String str) {
-//    if (str == null || str.isEmpty()) {
-//        return false;
-//    }
-//    try {
-//        Double.parseDouble(str);
-//        return true;
-//    } catch (NumberFormatException e) {
-//        return false;
-//    }
-//}
-//    private void showMessage(String message) {
-//    // You can implement a method to display messages to the user
-//    // For example, using a JOptionPane or updating a status label
-//    JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.ERROR_MESSAGE);
-//}
+  
+private String date() {
+    // You can customize this method based on how you want to retrieve the current date
+    // Here, we are using the current system date as a placeholder
+    return java.time.LocalDate.now().toString();
+}   
+  private void clearTextField() {
+    quan.setText("");
+    total.setText("");
+    change.setText("");
+   payment.setText("");
+}
+ private void clearTextFields() {
+    product10.setText("");
+    category10.setSelectedIndex(0); // Assuming the first item is a default or empty value
+    price10.setText("");
+    quantity10.setText("");
+}
+  
+
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -214,6 +179,11 @@ private double getSelectedItemPrice() {
         jLabel6 = new javax.swing.JLabel();
         CART = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        table = new javax.swing.JTable();
+        getpay = new javax.swing.JButton();
+        reset = new javax.swing.JButton();
+        del = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         ACCOUNT = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -232,10 +202,16 @@ private double getSelectedItemPrice() {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        totalTextField = new javax.swing.JTextField();
-        quantityTextField = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        payment = new javax.swing.JTextField();
+        total = new javax.swing.JTextField();
+        quan = new javax.swing.JTextField();
+        change = new javax.swing.JTextField();
+        pay = new javax.swing.JButton();
+        product10 = new javax.swing.JTextField();
+        category10 = new javax.swing.JComboBox<>();
+        quantity10 = new javax.swing.JTextField();
+        price10 = new javax.swing.JTextField();
+        seladd10 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         ENTER = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
@@ -329,6 +305,51 @@ private double getSelectedItemPrice() {
         jLabel2.setFont(new java.awt.Font("Kristen ITC", 0, 36)); // NOI18N
         jLabel2.setText("Cart");
         CART.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 15, -1, -1));
+
+        table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Quantity", "Product", "Price", "Category", "Date "
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        table.setColumnSelectionAllowed(true);
+        jScrollPane1.setViewportView(table);
+
+        CART.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 630, 330));
+
+        getpay.setText("Pay");
+        getpay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                getpayActionPerformed(evt);
+            }
+        });
+        CART.add(getpay, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 430, -1, -1));
+
+        reset.setText("Reset");
+        reset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetActionPerformed(evt);
+            }
+        });
+        CART.add(reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 430, -1, -1));
+
+        del.setText("Delete");
+        del.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delActionPerformed(evt);
+            }
+        });
+        CART.add(del, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, -1, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/skies and flowers.png"))); // NOI18N
         CART.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 860, 480));
@@ -435,60 +456,82 @@ private double getSelectedItemPrice() {
 
         jLabel10.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
         jLabel10.setText("Enter Payment:");
-        PAYMENT.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, -1));
+        PAYMENT.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
         jLabel11.setText("Total:");
-        PAYMENT.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, -1, -1));
+        PAYMENT.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
         jLabel12.setText("Quantity:");
-        PAYMENT.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, -1, -1));
+        PAYMENT.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, -1, -1));
 
         jLabel13.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
         jLabel13.setText("Change:");
-        PAYMENT.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, -1, -1));
+        PAYMENT.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, -1, -1));
 
-        jTextField1.setBackground(new java.awt.Color(148, 174, 137));
-        jTextField1.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
-        jTextField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        payment.setBackground(new java.awt.Color(148, 174, 137));
+        payment.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
+        payment.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        payment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                paymentActionPerformed(evt);
             }
         });
-        PAYMENT.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, 300, 50));
+        PAYMENT.add(payment, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 300, 50));
 
-        totalTextField.setBackground(new java.awt.Color(148, 174, 137));
-        totalTextField.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
-        totalTextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        totalTextField.setEnabled(false);
-        totalTextField.setFocusable(false);
-        totalTextField.addActionListener(new java.awt.event.ActionListener() {
+        total.setBackground(new java.awt.Color(148, 174, 137));
+        total.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
+        total.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        total.setEnabled(false);
+        total.setFocusable(false);
+        total.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                totalTextFieldActionPerformed(evt);
+                totalActionPerformed(evt);
             }
         });
-        PAYMENT.add(totalTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 300, 50));
+        PAYMENT.add(total, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 300, 50));
 
-        quantityTextField.setBackground(new java.awt.Color(148, 174, 137));
-        quantityTextField.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
-        quantityTextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        quantityTextField.setEnabled(false);
-        quantityTextField.setFocusable(false);
-        PAYMENT.add(quantityTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 290, 300, 50));
+        quan.setBackground(new java.awt.Color(148, 174, 137));
+        quan.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
+        quan.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        quan.setEnabled(false);
+        quan.setFocusable(false);
+        PAYMENT.add(quan, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 300, 50));
 
-        jTextField4.setBackground(new java.awt.Color(148, 174, 137));
-        jTextField4.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
-        jTextField4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jTextField4.setEnabled(false);
-        jTextField4.setFocusable(false);
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        change.setBackground(new java.awt.Color(148, 174, 137));
+        change.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
+        change.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        change.setEnabled(false);
+        change.setFocusable(false);
+        change.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                changeActionPerformed(evt);
             }
         });
-        PAYMENT.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, 300, 50));
+        PAYMENT.add(change, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 300, 50));
+
+        pay.setText("Pay");
+        pay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                payActionPerformed(evt);
+            }
+        });
+        PAYMENT.add(pay, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 380, -1, -1));
+        PAYMENT.add(product10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-26, 440, 130, -1));
+
+        category10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Single Player Game", "Entertainment Apps", "Multiplayer Game", "Others" }));
+        PAYMENT.add(category10, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 440, 130, -1));
+        PAYMENT.add(quantity10, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 440, 110, -1));
+        PAYMENT.add(price10, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 440, 100, -1));
+
+        seladd10.setText("Select and Add");
+        seladd10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seladd10seladdActionPerformed(evt);
+            }
+        });
+        PAYMENT.add(seladd10, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 440, -1, -1));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/skies and flowers.png"))); // NOI18N
         PAYMENT.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 860, 480));
@@ -702,17 +745,17 @@ private double getSelectedItemPrice() {
         this.dispose();
     }//GEN-LAST:event_updpassActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void paymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paymentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_paymentActionPerformed
 
-    private void totalTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_totalTextFieldActionPerformed
+    private void totalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_totalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_totalTextFieldActionPerformed
+    }//GEN-LAST:event_totalActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void changeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_changeActionPerformed
 
     private void singleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_singleActionPerformed
         this.showTabs("SINGLE");
@@ -729,6 +772,154 @@ private double getSelectedItemPrice() {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         this.showTabs("ENTER");
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void getpayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getpayActionPerformed
+        DefaultTableModel tableModel = (DefaultTableModel) table.getModel();
+
+        // Check if any row is selected
+        if (table.getSelectedRow() == -1) {
+            JOptionPane.showMessageDialog(this, "No row selected. Please select a row.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Initialize total quantity and total price
+        int totalQuantity = 0;
+        double totalPrice = 0.0;
+
+        for (int row = 0; row < tableModel.getRowCount(); row++) {
+            try {
+                // Assuming column indices (adjust according to your table structure)
+                Object quantityObj = tableModel.getValueAt(row, 0);
+                Object priceObj = tableModel.getValueAt(row, 2); // Adjust the column index
+
+                // Convert quantity and price to appropriate types (assuming they are integers and doubles)
+                int quantity = Integer.parseInt(quantityObj.toString());
+                double price = Double.parseDouble(priceObj.toString());
+
+                // Calculate total quantity and total price
+                totalQuantity += quantity;
+                totalPrice += quantity * price;
+            } catch (NumberFormatException e) {
+                // Handle the case where conversion to numbers fails
+                System.err.println("Error converting quantity or price to numbers at row " + (row + 1));
+            }
+        }
+
+        // Set the calculated values to the text fields
+        quan.setText(String.valueOf(totalQuantity));
+        total.setText(String.valueOf(totalPrice));
+
+        // Display the result in a JOptionPane
+        JOptionPane.showMessageDialog(this, "Total Quantity: " + totalQuantity + "\nTotal Price: " + totalPrice);
+        JOptionPane.showMessageDialog(this, "Please Proceed on the Payment Tab");
+    }//GEN-LAST:event_getpayActionPerformed
+
+    private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
+        resetTable();
+    }//GEN-LAST:event_resetActionPerformed
+
+    private void delActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delActionPerformed
+        DefaultTableModel tableModel = (DefaultTableModel) table.getModel();
+
+        // Get the selected row index
+        int selectedRowIndex = table.getSelectedRow();
+
+        if (selectedRowIndex != -1) { // Check if a row is selected
+            // Assuming column indices (adjust according to your table structure)
+            Object productIdObj = tableModel.getValueAt(selectedRowIndex, 0);
+
+            try {
+                // Convert product ID to the appropriate type (assuming it's an integer)
+                int productId = Integer.parseInt(productIdObj.toString());
+
+                // Delete the product from the database
+                model.deleteProduct(productId);
+
+                // Remove the selected row from the table
+                tableModel.removeRow(selectedRowIndex);
+
+            } catch (NumberFormatException e) {
+                // Handle the case where conversion to a number fails
+                System.err.println("Error converting product ID to a number.");
+            }
+        } else {
+            // Handle the case where no row is selected
+            System.err.println("No row selected.");
+        }
+
+    }//GEN-LAST:event_delActionPerformed
+
+    private void payActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payActionPerformed
+        try {
+            double paymentAmount = Double.parseDouble(payment.getText());
+
+            // Assuming you have a JTextField named "total" for displaying the total amount
+            double totalAmount = Double.parseDouble(total.getText());
+
+            // Calculate change
+            double changed = paymentAmount - totalAmount;
+
+            if (changed >= 0) {
+                // Assuming you have a JTextField named "changeField" for displaying the change amount
+                change.setText(String.valueOf(changed));
+
+                // Show success message
+                JOptionPane.showMessageDialog(this, "Payment successful! Change: " + changed, "Success", JOptionPane.INFORMATION_MESSAGE);
+
+                // Clear text fields after a successful purchase
+                clearTextField();
+            } else {
+                // Show error message for insufficient payment
+                JOptionPane.showMessageDialog(this, "Insufficient payment. Please enter a valid amount.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (NumberFormatException e) {
+            // Handle the case where the entered payment amount is not a valid double
+            // You might want to show an error message or handle it according to your requirements
+            e.printStackTrace(); // Print the exception details for debugging
+
+            // Show failure message
+            JOptionPane.showMessageDialog(this, "Invalid payment amount. Please enter a valid number.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+    }//GEN-LAST:event_payActionPerformed
+
+    private void seladd10seladdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seladd10seladdActionPerformed
+        String Product = product10.getText();
+        String Category = category10.getSelectedItem().toString();
+
+        try {
+            totalPrice = Double.parseDouble(price10.getText()); // Convert the text to double
+        } catch (NumberFormatException e) {
+            // Handle the case where the text in the price field is not a valid double
+            // Show an error message
+            JOptionPane.showMessageDialog(this, "Invalid total price. Please enter a valid number.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        int Quantity;
+        try {
+            Quantity = Integer.parseInt(quantity10.getText()); // Convert the text to double
+        } catch (NumberFormatException e) {
+            // Handle the case where the text in the quantity field is not a valid double
+            // Show an error message
+            JOptionPane.showMessageDialog(this, "Invalid quantity. Please enter a valid whole number.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Assuming you have a DefaultTableModel named "tableModel"
+        DefaultTableModel tableModel = (DefaultTableModel) table.getModel(); // replace with your actual table model
+
+        // Add the values to the table model
+        tableModel.addRow(new Object[]{Quantity, Product, totalPrice, Category, date()});
+        model.saveProduct(Quantity, Product, totalPrice, Category);
+
+        // Clear text fields after adding to the table
+        clearTextFields();
+
+        // Show a success message
+        JOptionPane.showMessageDialog(this, "Product added successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+
+    }//GEN-LAST:event_seladd10seladdActionPerformed
 
     /**
      * @param args the command line arguments
@@ -763,8 +954,12 @@ private double getSelectedItemPrice() {
     private javax.swing.JButton cat2;
     private javax.swing.JButton cat3;
     private javax.swing.JButton cat4;
+    private javax.swing.JComboBox<String> category10;
+    private javax.swing.JTextField change;
     private javax.swing.JButton create;
+    private javax.swing.JButton del;
     private javax.swing.JButton delete;
+    private javax.swing.JButton getpay;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -790,14 +985,21 @@ private double getSelectedItemPrice() {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton logout;
     private javax.swing.JTextField name;
-    private javax.swing.JTextField quantityTextField;
+    private javax.swing.JButton pay;
+    private javax.swing.JTextField payment;
+    private javax.swing.JTextField price10;
+    private javax.swing.JTextField product10;
+    private javax.swing.JTextField quan;
+    private javax.swing.JTextField quantity10;
+    private javax.swing.JButton reset;
+    private javax.swing.JButton seladd10;
     private javax.swing.JButton single;
+    private javax.swing.JTable table;
     private javax.swing.JLabel time;
-    private javax.swing.JTextField totalTextField;
+    private javax.swing.JTextField total;
     private javax.swing.JButton updpass;
     private javax.swing.JButton upduser;
     // End of variables declaration//GEN-END:variables

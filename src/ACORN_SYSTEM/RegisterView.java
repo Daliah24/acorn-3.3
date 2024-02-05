@@ -58,7 +58,9 @@ String correctAnswer2 = "correctAnswer2";
     return userIsLoggedIn;
 }
     
-    
+    private boolean isInvalidSecurityAnswer(String answer) {
+    return answer == null || answer.trim().isEmpty();
+}
 
  
     
@@ -254,54 +256,62 @@ String correctAnswer2 = "correctAnswer2";
     }//GEN-LAST:event_showpassActionPerformed
 
     private void savesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_savesActionPerformed
-      String fname = fnamee.getText();
-    String lname = lnamee.getText();
-    String address = addresse.getText();
-    String gender = gendere.getSelectedItem().toString();
-    String user = usere.getText();
-    String pass = passe.getText();
-    String ages = agee.getText();
+   String fname = fnamee.getText();
+String lname = lnamee.getText();
+String address = addresse.getText();
+String gender = gendere.getSelectedItem().toString();
+String user = usere.getText();
+String pass = passe.getText();
+String ages = agee.getText();
 
-    try {
-        // Check if ages is a valid integer
-        if (!ages.matches("\\d+")) {
-            JOptionPane.showMessageDialog(null, "Please enter a valid numeric value for Age.", "Error", JOptionPane.ERROR_MESSAGE);
-            return; // Don't proceed further if the age is not a number
-        }
-
-        int age = Integer.parseInt(agee.getText());
-
-        if (controller.doesUsernameExist(user)) {
-            JOptionPane.showMessageDialog(null, "Username already exists. Please choose a different username.", "Error", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-
-        // Add security questions
-        String securityAnswer1 = JOptionPane.showInputDialog(null, "What is the maiden name of your mother:", "Security Answer 1", JOptionPane.QUESTION_MESSAGE);
-        String securityAnswer2 = JOptionPane.showInputDialog(null, "What is the name of your first pet:", "Security Answer 2", JOptionPane.QUESTION_MESSAGE);
-
-        // Check password length
-        if (pass.length() < 8) {
-            JOptionPane.showMessageDialog(null, "Password must be at least 8 characters long.", "Error", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-
-        // Proceed with registration
-        controller.registerUser(fname, lname, age, gender, address, user, pass, securityAnswer1, securityAnswer2);
-
-        JOptionPane.showMessageDialog(null, "New account created");
-        LoginView viewer = new LoginView();
-        viewer.setVisible(true);
-        this.dispose();
-    } catch (NumberFormatException e) {
-        // Handle the case where parseInt fails (e.g., invalid integer format for age)
+try {
+    // Check if ages is a valid integer
+    if (!ages.matches("\\d+")) {
         JOptionPane.showMessageDialog(null, "Please enter a valid numeric value for Age.", "Error", JOptionPane.ERROR_MESSAGE);
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        return; // Don't proceed further if the age is not a number
     }
 
+    int age = Integer.parseInt(agee.getText());
 
+    if (controller.doesUsernameExist(user)) {
+        JOptionPane.showMessageDialog(null, "Username already exists. Please choose a different username.", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
 
+    // Add security questions
+    String securityAnswer1 = JOptionPane.showInputDialog(null, "What is the maiden name of your mother:", "Security Answer 1", JOptionPane.QUESTION_MESSAGE);
+
+    if (isInvalidSecurityAnswer(securityAnswer1)) {
+        JOptionPane.showMessageDialog(null, "Invalid security answer. Please provide a valid answer.", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
+
+    String securityAnswer2 = JOptionPane.showInputDialog(null, "What is the name of your first pet:", "Security Answer 2", JOptionPane.QUESTION_MESSAGE);
+
+    if (isInvalidSecurityAnswer(securityAnswer2)) {
+        JOptionPane.showMessageDialog(null, "Invalid security answer. Please provide a valid answer.", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
+
+    // Check password length
+    if (pass.length() < 8) {
+        JOptionPane.showMessageDialog(null, "Password must be at least 8 characters long.", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
+
+    // Proceed with registration
+    controller.registerUser(fname, lname, age, gender, address, user, pass, securityAnswer1, securityAnswer2);
+
+    JOptionPane.showMessageDialog(null, "New account created");
+    LoginView viewer = new LoginView();
+    viewer.setVisible(true);
+    this.dispose();
+} catch (NumberFormatException e) {
+    // Handle the case where parseInt fails (e.g., invalid integer format for age)
+    JOptionPane.showMessageDialog(null, "Please enter a valid numeric value for Age.", "Error", JOptionPane.ERROR_MESSAGE);
+} catch (Exception e) {
+    JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+}
     }//GEN-LAST:event_savesActionPerformed
 
     private void fnameeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fnameeActionPerformed
