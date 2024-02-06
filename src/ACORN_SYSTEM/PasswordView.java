@@ -17,6 +17,7 @@ public class PasswordView extends javax.swing.JFrame {
    
    private PasswordController controllers;
    private  DatabaseHandler handler;
+    private String user;
    
    
     public PasswordView(PasswordController controller) {
@@ -140,7 +141,7 @@ public void setVisibility(boolean isVisible) {
                 loginActionPerformed(evt);
             }
         });
-        jPanel3.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 110, 50));
+        jPanel3.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 110, 50));
 
         save.setBackground(new java.awt.Color(148, 174, 137));
         save.setFont(new java.awt.Font("Kristen ITC", 1, 12)); // NOI18N
@@ -151,7 +152,7 @@ public void setVisibility(boolean isVisible) {
                 saveActionPerformed(evt);
             }
         });
-        jPanel3.add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 110, 50));
+        jPanel3.add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 110, 50));
 
         passe1.setBackground(new java.awt.Color(148, 174, 137));
         jPanel3.add(passe1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 243, 312, 34));

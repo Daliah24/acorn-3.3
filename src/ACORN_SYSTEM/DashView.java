@@ -188,6 +188,11 @@ private String date() {
         jLabel8 = new javax.swing.JLabel();
         ABOUT = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextPane2 = new javax.swing.JTextPane();
         jLabel15 = new javax.swing.JLabel();
         PAYMENT = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -205,7 +210,6 @@ private String date() {
         jLabel5 = new javax.swing.JLabel();
         logout = new javax.swing.JButton();
         delete = new javax.swing.JButton();
-        upduser = new javax.swing.JButton();
         updpass = new javax.swing.JButton();
         create = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
@@ -223,18 +227,27 @@ private String date() {
         Valorantbutton = new javax.swing.JButton();
         farlight84button = new javax.swing.JButton();
         jLabel26 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         ENTER = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         netfilx = new javax.swing.JButton();
         disney = new javax.swing.JButton();
         hbo = new javax.swing.JButton();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         OTHERS = new javax.swing.JPanel();
         L4D2 = new javax.swing.JButton();
         SUPERMARIO64 = new javax.swing.JButton();
         ACII = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         cat2 = new javax.swing.JButton();
@@ -244,7 +257,6 @@ private String date() {
         time = new javax.swing.JLabel();
         cat = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        name = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         seladd10 = new javax.swing.JButton();
@@ -406,8 +418,22 @@ private String date() {
         jLabel4.setText("About Us");
         ABOUT.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
 
+        jLabel30.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\tempFileForShare_20240206-155626.jpg")); // NOI18N
+        ABOUT.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 290, 200));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Welcome to Acorn!, the ultimate destination for all gaming enthusiasts. We are a team of passionate gamers who decided to turn our love for games into a one-stop-shop for all your gaming needs.\n \nAt Acorn, we believe in the power of gaming to bring people together, inspire creativity, and provide a much-needed escape from the daily grind. We offer a wide variety of video games across different genres and platforms, ensuring there's something for everyone, from the casual gamer to the hardcore enthusiast.\n \nBut we're not just about selling games. We're about creating a community. Our shop is a place where gamers can come together to discuss their favorite games, share tips and strategies, and even participate in regular gaming tournaments.\n \nWe pride ourselves on our commitment to customer service. Our knowledgeable staff are always on hand to answer any questions, provide recommendations, and help you find the perfect game.\n \nWhether you're a lifelong gamer or just discovering the world of video games, we invite you to join our community, explore our extensive selection, and share in our love for gaming.\n \nWelcome to Acorn!. Game on!");
+        jScrollPane4.setViewportView(jTextArea1);
+
+        ABOUT.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 40, 380, 200));
+
+        jScrollPane3.setViewportView(jTextPane2);
+
+        ABOUT.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 40, 380, 200));
+
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
-        ABOUT.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, -1, 510));
+        ABOUT.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 510));
 
         DASHB.addTab("ABOUT US", ABOUT);
 
@@ -498,7 +524,6 @@ private String date() {
 
         logout.setBackground(new java.awt.Color(148, 174, 137));
         logout.setFont(new java.awt.Font("Kristen ITC", 0, 18)); // NOI18N
-        logout.setForeground(new java.awt.Color(255, 255, 255));
         logout.setText("Log Out");
         logout.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         logout.setPreferredSize(new java.awt.Dimension(168, 27));
@@ -507,11 +532,10 @@ private String date() {
                 logoutActionPerformed(evt);
             }
         });
-        ACCOUNT.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, 200, 60));
+        ACCOUNT.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 180, 200, 60));
 
         delete.setBackground(new java.awt.Color(148, 174, 137));
         delete.setFont(new java.awt.Font("Kristen ITC", 0, 18)); // NOI18N
-        delete.setForeground(new java.awt.Color(255, 255, 255));
         delete.setText("Delete Account");
         delete.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         delete.setPreferredSize(new java.awt.Dimension(168, 27));
@@ -520,24 +544,10 @@ private String date() {
                 deleteActionPerformed(evt);
             }
         });
-        ACCOUNT.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 180, 200, 60));
-
-        upduser.setBackground(new java.awt.Color(148, 174, 137));
-        upduser.setFont(new java.awt.Font("Kristen ITC", 0, 18)); // NOI18N
-        upduser.setForeground(new java.awt.Color(255, 255, 255));
-        upduser.setText("Update Username");
-        upduser.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        upduser.setPreferredSize(new java.awt.Dimension(168, 27));
-        upduser.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                upduserActionPerformed(evt);
-            }
-        });
-        ACCOUNT.add(upduser, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 200, 60));
+        ACCOUNT.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 200, 60));
 
         updpass.setBackground(new java.awt.Color(148, 174, 137));
         updpass.setFont(new java.awt.Font("Kristen ITC", 0, 18)); // NOI18N
-        updpass.setForeground(new java.awt.Color(255, 255, 255));
         updpass.setText("Update Password");
         updpass.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         updpass.setPreferredSize(new java.awt.Dimension(168, 27));
@@ -550,7 +560,6 @@ private String date() {
 
         create.setBackground(new java.awt.Color(148, 174, 137));
         create.setFont(new java.awt.Font("Kristen ITC", 0, 18)); // NOI18N
-        create.setForeground(new java.awt.Color(255, 255, 255));
         create.setText("Create New Account");
         create.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         create.addActionListener(new java.awt.event.ActionListener() {
@@ -606,7 +615,7 @@ private String date() {
 
         jLabel29.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
         jLabel29.setText("Price:");
-        SINGLE.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 390, -1, -1));
+        SINGLE.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 390, -1, -1));
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
         SINGLE.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1000, 510));
@@ -624,14 +633,36 @@ private String date() {
         MULTI.add(CODbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 200));
 
         Valorantbutton.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\multi2 (1).png")); // NOI18N
+        Valorantbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ValorantbuttonActionPerformed(evt);
+            }
+        });
         MULTI.add(Valorantbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 120, 200));
 
         farlight84button.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\multi3 (1).png")); // NOI18N
+        farlight84button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                farlight84buttonActionPerformed(evt);
+            }
+        });
         MULTI.add(farlight84button, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 120, 200));
 
         jLabel26.setFont(new java.awt.Font("Kristen ITC", 0, 36)); // NOI18N
         jLabel26.setText("Multi-Player Apps");
         MULTI.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        jLabel31.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
+        jLabel31.setText("Product Name:");
+        MULTI.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, -1, -1));
+
+        jLabel32.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
+        jLabel32.setText("Quantity:");
+        MULTI.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, -1, -1));
+
+        jLabel33.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
+        jLabel33.setText("Price:");
+        MULTI.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 390, -1, -1));
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
         MULTI.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1010, 510));
@@ -667,6 +698,18 @@ private String date() {
             }
         });
         ENTER.add(hbo, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 120, 200));
+
+        jLabel34.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
+        jLabel34.setText("Price:");
+        ENTER.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 390, -1, -1));
+
+        jLabel35.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
+        jLabel35.setText("Product Name:");
+        ENTER.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, -1, -1));
+
+        jLabel36.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
+        jLabel36.setText("Quantity:");
+        ENTER.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, -1, -1));
 
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
         ENTER.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, -1, 510));
@@ -704,6 +747,18 @@ private String date() {
         jLabel24.setText("Other Apps");
         OTHERS.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
+        jLabel37.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
+        jLabel37.setText("Price:");
+        OTHERS.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 390, -1, -1));
+
+        jLabel38.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
+        jLabel38.setText("Product Name:");
+        OTHERS.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, -1, -1));
+
+        jLabel39.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
+        jLabel39.setText("Quantity:");
+        OTHERS.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, -1, -1));
+
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
         jLabel25.setText("jLabel25");
         OTHERS.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1000, 510));
@@ -724,7 +779,7 @@ private String date() {
                 cat2ActionPerformed(evt);
             }
         });
-        jPanel1.add(cat2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 100, 40));
+        jPanel1.add(cat2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 100, 40));
 
         cat3.setBackground(new java.awt.Color(148, 174, 137));
         cat3.setFont(new java.awt.Font("Kristen ITC", 1, 14)); // NOI18N
@@ -735,7 +790,7 @@ private String date() {
                 cat3ActionPerformed(evt);
             }
         });
-        jPanel1.add(cat3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 100, 40));
+        jPanel1.add(cat3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 100, 40));
 
         cat1.setBackground(new java.awt.Color(148, 174, 137));
         cat1.setFont(new java.awt.Font("Kristen ITC", 1, 14)); // NOI18N
@@ -747,7 +802,7 @@ private String date() {
                 cat1ActionPerformed(evt);
             }
         });
-        jPanel1.add(cat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 100, 40));
+        jPanel1.add(cat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 100, 40));
 
         cat4.setBackground(new java.awt.Color(148, 174, 137));
         cat4.setFont(new java.awt.Font("Kristen ITC", 1, 14)); // NOI18N
@@ -761,13 +816,13 @@ private String date() {
                 cat4ActionPerformed(evt);
             }
         });
-        jPanel1.add(cat4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 100, 40));
+        jPanel1.add(cat4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 100, 40));
 
         time.setBackground(new java.awt.Color(148, 174, 137));
         time.setFont(new java.awt.Font("Kristen ITC", 1, 18)); // NOI18N
         time.setText(" 00:00:00");
         time.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPanel1.add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 100, 40));
+        jPanel1.add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 100, 40));
 
         cat.setBackground(new java.awt.Color(148, 174, 137));
         cat.setFont(new java.awt.Font("Kristen ITC", 1, 14)); // NOI18N
@@ -778,23 +833,11 @@ private String date() {
                 catActionPerformed(evt);
             }
         });
-        jPanel1.add(cat, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 100, 40));
+        jPanel1.add(cat, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 100, 40));
 
         jLabel7.setFont(new java.awt.Font("Kristen ITC", 1, 24)); // NOI18N
         jLabel7.setText("Acorn");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, 40));
-
-        name.setEditable(false);
-        name.setBackground(new java.awt.Color(148, 174, 137));
-        name.setFont(new java.awt.Font("Kristen ITC", 1, 14)); // NOI18N
-        name.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        name.setEnabled(false);
-        name.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameActionPerformed(evt);
-            }
-        });
-        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 190, 90));
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/new Skies and flower bg.png"))); // NOI18N
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 500));
@@ -828,7 +871,7 @@ private String date() {
         price10.setBackground(new java.awt.Color(244, 236, 225));
         price10.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
         price10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPanel3.add(price10, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, 120, 60));
+        jPanel3.add(price10, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 10, 100, 60));
 
         category10.setBackground(new java.awt.Color(244, 236, 225));
         category10.setFont(new java.awt.Font("Kristen ITC", 1, 12)); // NOI18N
@@ -844,12 +887,14 @@ private String date() {
         quantity10.setBackground(new java.awt.Color(244, 236, 225));
         quantity10.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
         quantity10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPanel3.add(quantity10, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 60, 60));
+        jPanel3.add(quantity10, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 80, 60));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ACORN_SYSTEM/Skies and Flowers 2.0.png"))); // NOI18N
         jLabel14.setText("jLabel14");
         jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 20));
 
+        unsel.setBackground(new java.awt.Color(244, 236, 225));
+        unsel.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
         unsel.setText("Unselect");
         unsel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -878,10 +923,6 @@ private String date() {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameActionPerformed
-
-    }//GEN-LAST:event_nameActionPerformed
 
     private void catActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catActionPerformed
         this.showTabs("CATEGORY");
@@ -920,9 +961,13 @@ private String date() {
     }//GEN-LAST:event_logoutActionPerformed
 
     private void createActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createActionPerformed
+        int confirm = JOptionPane.showConfirmDialog(this, "if you continue you will be logged out do you wish to continue?", "Confirm Logout", JOptionPane.YES_NO_OPTION);
+        
+        if (confirm == JOptionPane.YES_OPTION) {
+        
         RegisterView regview = new RegisterView();
         regview.setVisible(true);
-        this.dispose();
+        this.dispose();}
     }//GEN-LAST:event_createActionPerformed
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
@@ -930,7 +975,7 @@ private String date() {
 
         if (confirm == JOptionPane.YES_OPTION) {
             // Delete the account from the database
-            controller.deleteAccount();
+            controller.deleteAccount(user);
 
             // Display a message saying "Account successfully deleted"
             JOptionPane.showMessageDialog(this, "Account successfully deleted", "Account Deleted", JOptionPane.OK_OPTION);
@@ -941,14 +986,13 @@ private String date() {
         }
     }//GEN-LAST:event_deleteActionPerformed
 
-    private void upduserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upduserActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_upduserActionPerformed
-
     private void updpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updpassActionPerformed
-       PasswordView pass = new PasswordView(controllers);
+       int confirm = JOptionPane.showConfirmDialog(this, "if you continue you will be logged out do you wish to continue?", "Confirm Logout", JOptionPane.YES_NO_OPTION);
+        
+        if (confirm == JOptionPane.YES_OPTION) {
+         PasswordView pass = new PasswordView(controllers);
         pass.setVisible(true);
-        this.dispose();
+        this.dispose();}
     }//GEN-LAST:event_updpassActionPerformed
 
     private void paymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paymentActionPerformed
@@ -976,7 +1020,7 @@ private String date() {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        this.showTabs("ENTER");
+        this.showTabs("OTHERS");
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void getpayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getpayActionPerformed
@@ -1017,7 +1061,8 @@ private String date() {
 
         // Display the result in a JOptionPane
         JOptionPane.showMessageDialog(this, "Total Quantity: " + totalQuantity + "\nTotal Price: " + totalPrice);
-        JOptionPane.showMessageDialog(this, "Please Proceed on the Payment Tab");
+        JOptionPane.showMessageDialog(this, "Proceeding to the Payment Tab");
+        this.showTabs("PAYMENT");
     }//GEN-LAST:event_getpayActionPerformed
 
     private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
@@ -1229,6 +1274,18 @@ category10.setSelectedItem("Other Apps");
 price10.setText(String.valueOf(1000.00));
     }//GEN-LAST:event_ACIIActionPerformed
 
+    private void ValorantbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ValorantbuttonActionPerformed
+        product10.setText("Valorant");
+category10.setSelectedItem("Multi-Player Apps"); 
+price10.setText(String.valueOf(1500.00));
+    }//GEN-LAST:event_ValorantbuttonActionPerformed
+
+    private void farlight84buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_farlight84buttonActionPerformed
+ product10.setText("Farlight84");
+category10.setSelectedItem("Multi-Player Apps"); 
+price10.setText(String.valueOf(1250.00));        // TODO add your handling code here:
+    }//GEN-LAST:event_farlight84buttonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1305,6 +1362,16 @@ price10.setText(String.valueOf(1000.00));
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1315,8 +1382,11 @@ price10.setText(String.valueOf(1000.00));
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextPane jTextPane2;
     private javax.swing.JButton logout;
-    private javax.swing.JTextField name;
     private javax.swing.JButton netfilx;
     private javax.swing.JButton pay;
     private javax.swing.JTextField payment;
@@ -1333,7 +1403,6 @@ price10.setText(String.valueOf(1000.00));
     private javax.swing.JTextField total;
     private javax.swing.JButton unsel;
     private javax.swing.JButton updpass;
-    private javax.swing.JButton upduser;
     // End of variables declaration//GEN-END:variables
 }
 

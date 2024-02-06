@@ -1,7 +1,6 @@
 package DATA;
 
 import ACORN_SYSTEM.DashView;
-import ACORN_SYSTEM.RegisterView;
 import DATABASE.DatabaseHandler;
 
 public class DashController {
@@ -17,7 +16,7 @@ public class DashController {
 
     // Other methods in DashController...
 
-    public void deleteAccount() {
+    public void deleteAccount(String user) {
         // Add logic to delete the account from the database
         // For example, you can call a method from the model to perform the deletion
         model.deleteAccount(user);

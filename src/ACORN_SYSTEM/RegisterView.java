@@ -294,8 +294,8 @@ try {
     }
 
     // Check password length
-    if (pass.length() < 2) {
-        JOptionPane.showMessageDialog(null, "Password must be at least 3 characters long.", "Error", JOptionPane.ERROR_MESSAGE);
+    if (pass.length() < 5) {
+        JOptionPane.showMessageDialog(null, "Password must be at least 5 characters long.", "Error", JOptionPane.ERROR_MESSAGE);
         return;
     }
 
