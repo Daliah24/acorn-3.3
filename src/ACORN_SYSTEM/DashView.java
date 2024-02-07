@@ -27,11 +27,10 @@ public class DashView extends javax.swing.JFrame {
     
       private DashController controller;
       private PasswordController controllers;
-      private Timer timer;
-      private RegisterView view;
+      private final Timer timer;
       private static Connection connection;
       private static String user;
-      private DashModel model;
+      private final DashModel model;
       private double totalPrice;
       private double payments;
       
@@ -267,6 +266,8 @@ private String date() {
         jLabel14 = new javax.swing.JLabel();
         unsel = new javax.swing.JButton();
         jLabel21 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        receipt = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -295,7 +296,7 @@ private String date() {
 
         jButton2.setBackground(new java.awt.Color(148, 174, 137));
         jButton2.setFont(new java.awt.Font("Kristen ITC", 1, 24)); // NOI18N
-        jButton2.setText("Mutli-Player");
+        jButton2.setText("Multi-Player");
         jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton2.setPreferredSize(new java.awt.Dimension(230, 90));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -417,8 +418,6 @@ private String date() {
         jLabel4.setFont(new java.awt.Font("Kristen ITC", 0, 36)); // NOI18N
         jLabel4.setText("About Us");
         ABOUT.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
-
-        jLabel30.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\tempFileForShare_20240206-155626.jpg")); // NOI18N
         ABOUT.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 290, 200));
 
         jTextArea1.setColumns(20);
@@ -511,7 +510,7 @@ private String date() {
             }
         });
         PAYMENT.add(change, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 300, 50));
-        PAYMENT.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1000, 510));
+        PAYMENT.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 0, 1180, 510));
 
         DASHB.addTab("Payment", PAYMENT);
 
@@ -581,7 +580,6 @@ private String date() {
         jLabel23.setText("Single-Player Apps");
         SINGLE.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
-        GoFbutton.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\single1 (1).jpg")); // NOI18N
         GoFbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GoFbuttonActionPerformed(evt);
@@ -589,7 +587,6 @@ private String date() {
         });
         SINGLE.add(GoFbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 200));
 
-        Spiderman.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\single2 (1).jpg")); // NOI18N
         Spiderman.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SpidermanActionPerformed(evt);
@@ -597,7 +594,6 @@ private String date() {
         });
         SINGLE.add(Spiderman, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 120, 200));
 
-        gta.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\single3 (1).png")); // NOI18N
         gta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 gtaActionPerformed(evt);
@@ -624,7 +620,6 @@ private String date() {
 
         MULTI.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        CODbutton.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\multi1 (1).jpg")); // NOI18N
         CODbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CODbuttonActionPerformed(evt);
@@ -632,7 +627,6 @@ private String date() {
         });
         MULTI.add(CODbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 200));
 
-        Valorantbutton.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\multi2 (1).png")); // NOI18N
         Valorantbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ValorantbuttonActionPerformed(evt);
@@ -640,7 +634,6 @@ private String date() {
         });
         MULTI.add(Valorantbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 120, 200));
 
-        farlight84button.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\multi3 (1).png")); // NOI18N
         farlight84button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 farlight84buttonActionPerformed(evt);
@@ -675,7 +668,6 @@ private String date() {
         jLabel22.setText("Entertainment Apps");
         ENTER.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
-        netfilx.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\enter1.2 (1).jpg")); // NOI18N
         netfilx.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 netfilxActionPerformed(evt);
@@ -683,7 +675,6 @@ private String date() {
         });
         ENTER.add(netfilx, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 200));
 
-        disney.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\enter2 (1).jpg")); // NOI18N
         disney.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 disneyActionPerformed(evt);
@@ -691,7 +682,6 @@ private String date() {
         });
         ENTER.add(disney, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 120, 200));
 
-        hbo.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\enter3 (1).jpg")); // NOI18N
         hbo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hboActionPerformed(evt);
@@ -719,7 +709,6 @@ private String date() {
         OTHERS.setBackground(new java.awt.Color(225, 239, 237));
         OTHERS.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        L4D2.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\others1 (1).png")); // NOI18N
         L4D2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 L4D2ActionPerformed(evt);
@@ -727,7 +716,6 @@ private String date() {
         });
         OTHERS.add(L4D2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 200));
 
-        SUPERMARIO64.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\others2 (1).jpg")); // NOI18N
         SUPERMARIO64.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SUPERMARIO64ActionPerformed(evt);
@@ -735,7 +723,6 @@ private String date() {
         });
         OTHERS.add(SUPERMARIO64, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 120, 200));
 
-        ACII.setIcon(new javax.swing.ImageIcon("C:\\Photos 2.0\\category\\others3 (1).png")); // NOI18N
         ACII.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ACIIActionPerformed(evt);
@@ -908,17 +895,29 @@ private String date() {
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 410, 780, 90));
 
+        receipt.setColumns(20);
+        receipt.setRows(5);
+        jScrollPane2.setViewportView(receipt);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -1101,41 +1100,50 @@ private String date() {
     }//GEN-LAST:event_delActionPerformed
 
     private void payActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payActionPerformed
-        try {
-            double paymentAmount = Double.parseDouble(payment.getText());
+     try {
+    double paymentAmount = Double.parseDouble(payment.getText());
+    double totalAmount = Double.parseDouble(total.getText());
+    double changed = paymentAmount - totalAmount;
 
-            // Assuming you have a JTextField named "total" for displaying the total amount
-            double totalAmount = Double.parseDouble(total.getText());
+    if (changed >= 0) {
+        // Construct the receipt text
+        StringBuilder receiptText = new StringBuilder();
+        receiptText.append("┌───────────────────────┐\n");
+        receiptText.append("│      Payment Receipt   │\n");
+        receiptText.append("├───────────────────────┤\n");
+        receiptText.append("│ Total Amount: ").append(totalAmount).append("  │\n");
+        receiptText.append("│ Payment Amount: ").append(paymentAmount).append(" │\n");
+        receiptText.append("│ Change: ").append(changed).append("           │\n");
+        receiptText.append("│ Date: ").append(date()).append("         │\n");
+        receiptText.append("└───────────────────────┘");
 
-            // Calculate change
-            double changed = paymentAmount - totalAmount;
+        // Assuming you have a JTextArea named "receiptTextArea" for displaying the receipt
+        receipt.setText(receiptText.toString());
 
-            if (changed >= 0) {
-                // Assuming you have a JTextField named "changeField" for displaying the change amount
-                change.setText(String.valueOf(changed));
+        // Show success message
+        JOptionPane.showMessageDialog(this, "Payment successful! Change: " + changed, "Success", JOptionPane.INFORMATION_MESSAGE);
 
-                // Show success message
-                JOptionPane.showMessageDialog(this, "Payment successful! Change: " + changed, "Success", JOptionPane.INFORMATION_MESSAGE);
+        // Clear text fields after a successful purchase
+        clearTextField();
+    } else {
+        // Show error message for insufficient payment
+        JOptionPane.showMessageDialog(this, "Insufficient payment. Please enter a valid amount.", "Error", JOptionPane.ERROR_MESSAGE);
+    }
+} catch (NumberFormatException e) {
+    // Handle the case where the entered payment amount is not a valid double
+    e.printStackTrace(); // Print the exception details for debugging
 
-                // Clear text fields after a successful purchase
-                clearTextField();
-            } else {
-                // Show error message for insufficient payment
-                JOptionPane.showMessageDialog(this, "Insufficient payment. Please enter a valid amount.", "Error", JOptionPane.ERROR_MESSAGE);
-            }
-        } catch (NumberFormatException e) {
-            // Handle the case where the entered payment amount is not a valid double
-            // You might want to show an error message or handle it according to your requirements
-            e.printStackTrace(); // Print the exception details for debugging
+    // Show failure message
+    JOptionPane.showMessageDialog(this, "Invalid payment amount. Please enter a valid number.", "Error", JOptionPane.ERROR_MESSAGE);
+}
 
-            // Show failure message
-            JOptionPane.showMessageDialog(this, "Invalid payment amount. Please enter a valid number.", "Error", JOptionPane.ERROR_MESSAGE);
-        }
+}
+
 
     }//GEN-LAST:event_payActionPerformed
 
     private void seladd10seladdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seladd10seladdActionPerformed
-         // Check if the category is selected
+     // Check if the category is selected
     if (category10.getSelectedIndex() == -1) {
         // Display an error message if the category is not selected
         JOptionPane.showMessageDialog(this, "Please select a category.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -1152,39 +1160,60 @@ private String date() {
     String Product = product10.getText();
     String Category = category10.getSelectedItem().toString();
 
-    double totalPrice;
+    double unitPrice;
     try {
-        totalPrice = Double.parseDouble(price10.getText()); // Convert the text to double
+        unitPrice = Double.parseDouble(price10.getText()); // Convert the text to double
     } catch (NumberFormatException e) {
         // Handle the case where the text in the price field is not a valid double
         // Show an error message
-        JOptionPane.showMessageDialog(this, "Invalid total price. Please enter a valid number.", "Error", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Invalid unit price. Please enter a valid number.", "Error", JOptionPane.ERROR_MESSAGE);
         return;
     }
 
     int Quantity;
     try {
-        Quantity = Integer.parseInt(quantity10.getText()); // Convert the text to double
+        Quantity = Integer.parseInt(quantity10.getText()); // Convert the text to integer
     } catch (NumberFormatException e) {
-        // Handle the case where the text in the quantity field is not a valid double
+        // Handle the case where the text in the quantity field is not a valid integer
         // Show an error message
         JOptionPane.showMessageDialog(this, "Invalid quantity. Please enter a valid whole number.", "Error", JOptionPane.ERROR_MESSAGE);
         return;
     }
 
+    // Calculate the total price
+    double totalPrice = unitPrice * Quantity;
+
     // Assuming you have a DefaultTableModel named "tableModel"
     DefaultTableModel tableModel = (DefaultTableModel) table.getModel(); // replace with your actual table model
 
-    // Add the values to the table model
-    tableModel.addRow(new Object[]{Quantity, Product, totalPrice, Category, date()});
-    model.saveProduct(Quantity, Product, totalPrice, Category);
+    int rowIndex = -1;
+for (int i = 0; i < tableModel.getRowCount(); i++) {
+    if (tableModel.getValueAt(i, 1).equals(Product) && tableModel.getValueAt(i, 4).equals(Category)) {
+        rowIndex = i;
+        break;
+    }
+}
 
-    // Clear text fields after adding to the table
-    clearTextFields();
+if (rowIndex != -1) {
+    // Product already exists in the table, update quantity and total price
+    int existingQuantity = (int) tableModel.getValueAt(rowIndex, 0);
+    double existingTotalPrice = (double) tableModel.getValueAt(rowIndex, 3);
+    int newQuantity = existingQuantity + Quantity;
+    double newTotalPrice = existingTotalPrice + totalPrice;
+    tableModel.setValueAt(newQuantity, rowIndex, 0);
+    tableModel.setValueAt(newTotalPrice, rowIndex, 3);
+} else {
+    // Product does not exist in the table, add a new row
+    tableModel.addRow(new Object[]{Quantity, Product, unitPrice, totalPrice, Category,date()});
+}
 
-    // Show a success message
-    JOptionPane.showMessageDialog(this, "Product added successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+model.saveProduct(Quantity, Product, unitPrice, Category);
 
+// Clear text fields after adding to the table
+clearTextFields();
+
+// Show a success message
+JOptionPane.showMessageDialog(this, "Product added successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
 
     }//GEN-LAST:event_seladd10seladdActionPerformed
 
@@ -1382,6 +1411,7 @@ price10.setText(String.valueOf(1250.00));        // TODO add your handling code 
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTextArea jTextArea1;
@@ -1394,6 +1424,7 @@ price10.setText(String.valueOf(1250.00));        // TODO add your handling code 
     private javax.swing.JTextField product10;
     private javax.swing.JTextField quan;
     private javax.swing.JTextField quantity10;
+    private javax.swing.JTextArea receipt;
     private javax.swing.JButton reset;
     private javax.swing.JButton seladd10;
     private javax.swing.JCheckBox select;

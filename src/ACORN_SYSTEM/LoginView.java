@@ -17,8 +17,9 @@ import DATA.PasswordController;
  */
 public class LoginView extends javax.swing.JFrame {
     private LoginController controller;
+    private PasswordController controllers;
    private DashView dashView;
-//    private DatabaseHandler databaseHandler;
+
    private int loginAttempts = 0;
 private static final int MAX_LOGIN_ATTEMPTS = 3;
     public LoginView() {
@@ -217,36 +218,50 @@ private static final int MAX_LOGIN_ATTEMPTS = 3;
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
    String user = USERNAME.getText();
-    String pass = PASSWORD.getText();
+String pass = PASSWORD.getText();
 
-    try {
-        // Check if the fields are empty
-        if (user.isEmpty() || pass.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Username and password cannot be empty. Please enter both.");
-            return;  // Stop further processing if fields are empty
-        }
+try {
+    // Check if the fields are empty
+    if (user.isEmpty() || pass.isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Username and password cannot be empty. Please enter both.");
+        return;  // Stop further processing if fields are empty
+    }
 
-        // Check if the account exists before attempting to log in
-        if (controller.doesAccountExist(user, pass)) {
-            controller.loginUser(user, pass);
-            JOptionPane.showMessageDialog(null, "Account Logged-In Succesfully");
+    // Check if the account exists before attempting to log in
+    if (controller.doesAccountExist(user, pass)) {
+        controller.loginUser(user, pass);
+        JOptionPane.showMessageDialog(null, "Account Logged-In Succesfully");
 
-            // Open DashView only if login is successful
-            DashView view = new DashView(user);  // Pass the username
-            view.setVisible(true);
-            this.dispose();
-        } else {
-            // Display an error message if the account doesn't exist
-            JOptionPane.showMessageDialog(null, "Account does not exist. Please check your username and password.");
-            loginAttempts++;
-            if (loginAttempts >= MAX_LOGIN_ATTEMPTS) {
-                JOptionPane.showMessageDialog(null, "Maximum login attempts reached. Please try again later.");
+        // Open DashView only if login is successful
+        DashView view = new DashView(user);  // Pass the username
+        view.setVisible(true);
+        this.dispose();
+    } else {
+        // Display an error message if the account doesn't exist
+        JOptionPane.showMessageDialog(null, "Account does not exist. Please check your username and password.");
+        loginAttempts++;
+
+        if (loginAttempts >= MAX_LOGIN_ATTEMPTS) {
+            // If maximum login attempts reached, ask security questions
+            String securityAnswer1 = JOptionPane.showInputDialog(null, "What is the maiden name of your mother?");
+            String securityAnswer2 = JOptionPane.showInputDialog(null, "What is the name of your first pet?");
+
+            // Check the security answers from the database
+            if (controller.checkSecurityAnswers(user, securityAnswer1, securityAnswer2)) {
+                JOptionPane.showMessageDialog(null, "Security questions answered correctly. You may reset your password.");
+                PasswordView view = new PasswordView(controllers);
+                view.setVisible(true);
+                this.dispose();
+            } else {
+                JOptionPane.showMessageDialog(null, "Security answers incorrect. Maximum login attempts reached. Please try again later.");
                 this.dispose();
             }
         }
-    } catch (Exception e) {
-        e.printStackTrace();
     }
+} catch (Exception e) {
+    e.printStackTrace();
+}
+
 
     }//GEN-LAST:event_loginActionPerformed
 

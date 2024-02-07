@@ -38,18 +38,14 @@ public class LoginController {
             e.printStackTrace();
         }
     }
-    
-
-//    public void showPassActionPerformed(ActionEvent e) {
-//        // Implement show password logic here
-//        boolean showPassword = view.getShowPassCheckBox().isSelected();
-//        view.getPasswordField().setEchoChar(showPassword ? (char) 0 : '*');
-//    }
-//
-//    public void signupActionPerformed(ActionEvent e) {
-//        view.dispose();
-//        RegisterView regview = new RegisterView(dashview);
-//        regview.setVisible(true);
-//    }
+   public boolean checkSecurityAnswers(String user,String securityAnswer1, String securityAnswer2){
+       try {
+           model.checkSecurityAnswers(user,securityAnswer1, securityAnswer2);
+           
+       }catch (Exception e) {
+           e.printStackTrace();;
+       }
+        return false;
+   }
 }
     
