@@ -1137,7 +1137,7 @@ private String date() {
     JOptionPane.showMessageDialog(this, "Invalid payment amount. Please enter a valid number.", "Error", JOptionPane.ERROR_MESSAGE);
 }
 
-}
+
 
 
     }//GEN-LAST:event_payActionPerformed
