@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package ACORN_SYSTEM;
-import DATA.DashModel;
+import DATABASE.DashModel;
 import DATA.DashController;
 import DATA.PasswordController;
 import DATABASE.DatabaseHandler;

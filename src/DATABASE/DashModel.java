@@ -1,4 +1,4 @@
-package DATA;
+package DATABASE;
 
 import DATABASE.DatabaseHandler;
 import static DATABASE.DatabaseHandler.getConnection;

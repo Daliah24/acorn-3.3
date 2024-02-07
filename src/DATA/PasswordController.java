@@ -1,6 +1,6 @@
 package DATA;
 import ACORN_SYSTEM.PasswordView;
-import DATA.PasswordModel;
+import DATABASE.PasswordModel;
 import DATABASE.DatabaseHandler;
 
 public class PasswordController {

@@ -1,5 +1,6 @@
 package DATA;
 
+import DATABASE.LoginModel;
 import DATABASE.DatabaseHandler;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

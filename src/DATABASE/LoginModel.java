@@ -1,5 +1,5 @@
 
-package DATA;
+package DATABASE;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

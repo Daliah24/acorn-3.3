@@ -1,5 +1,6 @@
 package DATA;
 
+import DATABASE.DashModel;
 import ACORN_SYSTEM.DashView;
 import DATABASE.DatabaseHandler;
 

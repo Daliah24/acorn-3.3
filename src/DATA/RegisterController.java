@@ -1,5 +1,6 @@
 package DATA;
 
+import DATABASE.RegisterModel;
 import DATABASE.DatabaseHandler;
 import java.sql.SQLException;
 

@@ -1,4 +1,4 @@
-package DATA;
+package DATABASE;
 
 import DATABASE.DatabaseHandler;
 import java.sql.Connection;
